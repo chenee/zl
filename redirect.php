@@ -24,7 +24,6 @@ function httpGet($url) {
     return $res;
   }
 
-$res = json_decode(httpGet($url));
 /*
 {
    "access_token":"ACCESS_TOKEN",
@@ -34,19 +33,24 @@ $res = json_decode(httpGet($url));
 }
 */
 
+$res = json_decode(httpGet($url));
 $access_token = $res->access_token;
 if ($access_token) {
-}
+    $openid = $res->openid;
+    if ($openid) {
+        $url2 = "https://api.weixin.qq.com/sns/userinfo?access_token=$access_token&openid=$openid&lang=zh_CN";
 
-$openid = $res->openid;
-if ($openid) {
-}
+        $ret = httpGet($url2);
+    echo $ret;
 
-$openid = $res->openid;
-if ($openid) {
-    $url2 = "https://api.weixin.qq.com/sns/userinfo?access_token=$access_token&openid=$openid&lang=zh_CN";
-    $ret = httpGet($url2);
-echo $ret;
-    $res2 = json_decode(httpGet($url));
+        $res2 = json_decode($ret);
+
+    }
 
 }
+
+$lastpage = $_REQUEST['lastpage'];
+echo "from this page:   $lastpage";
+
+
+
