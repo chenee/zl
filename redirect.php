@@ -44,6 +44,7 @@ if ($access_token) {
     echo $ret;
 
         $res2 = json_decode($ret);
+        echo "<img src=$res2->headimgurl>";
 
     }
 
