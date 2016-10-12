@@ -33,10 +33,24 @@ $signPackage = $jssdk->GetSignPackage();
     signature: '<?php echo $signPackage["signature"];?>',
     jsApiList: [
       // 所有要调用的 API 都要加到这个列表中
+      'checkJsApi'
     ]
   });
   wx.ready(function () {
     // 在这里调用 API
+
+    wx.checkJsApi({
+        jsApiList: ['getLocation'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+        success: function(res) {
+            // 以键值对的形式返回，可用的api值true，不可用为false
+            // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+            echo "getLocation OK";
+        },
+        fail: function(res){
+            echo "getLocation fail";
+        }
+    });
+
   });
 </script>
 </html>
