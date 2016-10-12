@@ -1,6 +1,6 @@
 <?php
 require_once "jssdk.php";
-$jssdk = new JSSDK("yourAppID", "yourAppSecret");
+$jssdk = new JSSDK("wx9756628d86fa20fc", "a4c2500bcfa15901ed6915a5201a15a");
 $signPackage = $jssdk->GetSignPackage();
 ?>
 <!DOCTYPE html>
