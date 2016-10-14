@@ -1,29 +1,43 @@
 <?php
 
-
 $db = new mysqli('localhost', 'root', 'chenee', 'zl');
 
 if($db->connect_errno > 0){
-    die('Unable to connect to database [' . $db->connect_error . ']');
+die('Unable to connect to database (' . $db->connect_error . ')');
 }
 
-echo "connect to zl ok!<p>";
+function generate_password( $length = 8 ) {
+// 密码字符集，可任意添加你需要的字符
+$chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_ (){}<>~`+=,.;:/?|';
+$password = "";
 
-$user_name = $_REQUEST["user_name"];
-$user_pwd = $_REQUEST["user_pwd"];
-$select_sql = "select * from test where name = '$user_name' ";
-
-echo $select_sql . "<p>";
-
-if(!$result = $db->query($select_sql)){
-    die('There was an error running the query [' . $db->error . ']');
+for ( $i = 0; $i < $length; $i++ )
+{
+// 这里提供两种字符获取方式
+// 第一种是使用 substr 截取$chars中的任意一位字符；
+// 第二种是取字符数组 $chars 的任意元素
+// $password .= substr($chars, mt_rand(0, strlen($chars) – 1), 1);
+$password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+}
+return $password;
 }
 
-echo 'Total results: ' . $result->num_rows;
-
-
-while($row = $result->fetch_assoc()){
-    echo 'Name:' . $row['name'] . '&nbsp&nbsp&nbsp&nbsp&nbsp ADDR:'. $row['address']. '<br />';
+function check_input($db,$value)
+{
+// 去除斜杠
+if (get_magic_quotes_gpc())
+{
+$value = stripslashes($value);
+}
+// 如果不是数字则加引号
+if (!is_numeric($value))
+{
+$value = "'" . mysqli_real_escape_string($db,$value) . "'";
+}
+return $value;
 }
 
-$db->close();
+function getRequest($db,$value)
+{
+return check_input($db,$_REQUEST[$value]);
+}
