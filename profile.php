@@ -40,7 +40,8 @@ if ($result->fetch()){//if is enough
         <input type="hidden" name="wx_openid" value=<?php echo $wx_openid ?> />
         <input type="hidden" name="wx_nickname" value=<?php echo $wx_nickname ?> />
         <input type="hidden" name="wx_headimgurl" value=<?php echo $wx_headimgurl ?> />
-
+        <img width="200" height="200" src="<?php echo $wxinfo->headimgurl ?>">
+        
 		<p>姓名 <input type="text" name="name" value=<?php echo $name ?> /><br/>
 
 		<p>性别 <input type="text" name="sex" value=<?php echo $sex ?> /><br/>
