@@ -43,6 +43,19 @@ function getRequest($value)
    return check_input($_REQUEST[$value]);
 }
 
+//judge whether already registered
+$select_sql = "select wx_openid FROM user_info where wx_openid = ?";
+$result = $db->prepare($select_sql);
+$result->bind_param("s",$wx_openid);
+//$wx_openid = "YL9ZSXz6";
+$wx_openid = generate_password(8);
+
+$result->execute();
+if ($result->fetch()){//if is enough
+    echo "already registered!";
+    exit;
+}
+
 
 /*
 $insert_sql = "insert into user_info (wx_openid,wx_nickname,wx_headimgurl,name, sex, birthday, cellphone, email,
