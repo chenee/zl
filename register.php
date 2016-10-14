@@ -1,5 +1,20 @@
 <?php
 require_once ("wx_info.php");
+require_once ("db.php");
+
+//judge whether already registered
+$select_sql = "select wx_openid FROM user_info where wx_openid = ?";
+$result = $db->prepare($select_sql);
+$result->bind_param("s",$wx_openid);
+$wx_openid = $wxinfo->openid;
+
+$result->execute();
+if ($result->fetch()){//if is enough
+    echo "already registered!";
+    exit;
+}
+
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -15,7 +30,7 @@ require_once ("wx_info.php");
     <input type="hidden" name="wx_openid" value=<?php echo $wxinfo->openid ?> />
     <input type="hidden" name="wx_nickname" value=<?php echo $wxinfo->nickname ?> />
     <input type="hidden" name="wx_headimgurl" value=<?php echo $wxinfo->headimgurl ?> />
-    <img src="<?php echo $wxinfo->headimgurl ?>">
+    <img width="200" height="200" src="<?php echo $wxinfo->headimgurl ?>">
     <p>姓名 <input type="text" name="name" /><br/>
 
     <p>性别 <input type="text" name="sex" /><br/>

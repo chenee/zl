@@ -1,8 +1,9 @@
 <?php
 require_once ("db.php");
 
-
+//********** session ,cookie need!!!
 //judge whether already registered
+/*
 $select_sql = "select wx_openid FROM user_info where wx_openid = ?";
 $result = $db->prepare($select_sql);
 $result->bind_param("s",$wx_openid);
@@ -14,6 +15,7 @@ if ($result->fetch()){//if is enough
     echo "already registered!";
     exit;
 }
+*/
 
 
 /*
