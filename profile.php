@@ -11,14 +11,15 @@
 <body>
 <?php
 require_once ("db.php");
-
+require_once("wx_info.php");
 
 //judge whether already registered
 $select_sql = "select * FROM user_info where wx_openid = ?";
 $result = $db->prepare($select_sql);
 $result->bind_param("s",$wx_openid);
-$wx_openid = "}}XyhKE{";
+//$wx_openid = "}}XyhKE{";
 //$wx_openid = generate_password(8);
+$wx_openid = $wxinfo->openid;
 
 $result->bind_result(
 	$wx_openid, $wx_nickname , $wx_headimgurl,
