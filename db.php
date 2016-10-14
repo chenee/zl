@@ -25,3 +25,5 @@ echo 'Total results: ' . $result->num_rows;
 while($row = $result->fetch_assoc()){
     echo 'Name:' . $row['name'] . '&nbsp&nbsp&nbsp&nbsp&nbsp ADDR:'. $row['address']. '<br />';
 }
+
+$db->close();
