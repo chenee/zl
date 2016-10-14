@@ -1,56 +1,5 @@
 <?php
-$appid=wxbc5b302c49712761;
-$appsecret=a0819adf247e075d4c4b9fa9f1c1c7f0;
-
-$code = $_REQUEST["code"];
-
-//$url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=' + $appid + '&secret='+ $appsecret + '&code='+ $code +'&grant_type=authorization_code';
-$url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=$appid&secret=$appsecret&code=$code&grant_type=authorization_code";
-
-
-function httpGet($url) {
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curl, CURLOPT_TIMEOUT, 500);
-    // 为保证第三方服务器与微信服务器之间数据传输的安全性，所有微信接口采用https方式调用，必须使用下面2行代码打开ssl安全校验。
-    // 如果在部署过程中代码在此处验证失败，请到 http://curl.haxx.se/ca/cacert.pem 下载新的证书判别文件。
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, true);
-    curl_setopt($curl, CURLOPT_URL, $url);
-
-    $res = curl_exec($curl);
-    curl_close($curl);
-
-    return $res;
-  }
-
-/*
-{
-   "access_token":"ACCESS_TOKEN",
-   "refresh_token":"REFRESH_TOKEN",
-   "openid":"OPENID",
-   "scope":"SCOPE"
-}
-*/
-
-$res = json_decode(httpGet($url));
-$access_token = $res->access_token;
-if ($access_token) {
-    $openid = $res->openid;
-    if ($openid) {
-        $url2 = "https://api.weixin.qq.com/sns/userinfo?access_token=$access_token&openid=$openid&lang=zh_CN";
-
-        $ret = httpGet($url2);
-        //echo $ret;
-
-        $res2 = json_decode($ret);
-        //echo "<img src=$res2->headimgurl>";
-    }
-
-}
-
-$lastpage = $_REQUEST['lastpage'];
-echo "from this page:   $lastpage";
+require_once ("wx_info.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -63,10 +12,10 @@ echo "from this page:   $lastpage";
     <!-- TemplateEndEditable -->
 </head>
 <form action="user_register.php" method="POST">
-    <input type="hidden" name="wx_openid" value=<?php echo $res2->openid ?> />
-    <input type="hidden" name="wx_nickname" value=<?php echo $res2->nickname ?> />
-    <input type="hidden" name="wx_headimgurl" value=<?php echo $res2->headimgurl ?> />
-    <img src="<?php echo $res2->headimgurl ?>">
+    <input type="hidden" name="wx_openid" value=<?php echo $wxinfo->openid ?> />
+    <input type="hidden" name="wx_nickname" value=<?php echo $wxinfo->nickname ?> />
+    <input type="hidden" name="wx_headimgurl" value=<?php echo $wxinfo->headimgurl ?> />
+    <img src="<?php echo $wxinfo->headimgurl ?>">
     <p>姓名 <input type="text" name="name" /><br/>
 
     <p>性别 <input type="text" name="sex" /><br/>
