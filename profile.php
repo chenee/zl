@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- TemplateBeginEditable name="doctitle" -->
-<title>注册界面</title>
+<title>更新界面</title>
 <!-- TemplateEndEditable -->
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
@@ -17,7 +17,7 @@ require_once ("db.php");
 $select_sql = "select * FROM user_info where wx_openid = ?";
 $result = $db->prepare($select_sql);
 $result->bind_param("s",$wx_openid);
-$wx_openid = "3D#U.xYA";
+$wx_openid = "}}XyhKE{";
 //$wx_openid = generate_password(8);
 
 $result->bind_result(
@@ -36,25 +36,25 @@ if ($result->fetch()){//if is enough
 };
 ?>
 	<form action="update_profile.php" method="POST">
-        <input type="hidden" name="wx_openid" value="<?php echo $wx_openid ?>"/>
-        <input type="hidden" name="wx_nickname" value="<?php echo $wx_nickname ?>"/>
-        <input type="hidden" name="wx_headimgurl" value="<?php echo $wx_headimgurl ?>"/>
+        <input type="hidden" name="wx_openid" value=<?php echo $wx_openid ?> />
+        <input type="hidden" name="wx_nickname" value=<?php echo $wx_nickname ?> />
+        <input type="hidden" name="wx_headimgurl" value=<?php echo $wx_headimgurl ?> />
 
-		<p>姓名 <input type="text" name="name" value="<?php echo $name ?>"/><br/>
+		<p>姓名 <input type="text" name="name" value=<?php echo $name ?> /><br/>
 
-		<p>性别 <input type="text" name="sex" value="<?php echo $sex ?>"/><br/>
+		<p>性别 <input type="text" name="sex" value=<?php echo $sex ?> /><br/>
 
-		<p>出生年月 <input type="text" name="birthday" value="<?php echo $birthday ?>"/> <br/>
+		<p>出生年月 <input type="text" name="birthday" value=<?php echo $birthday ?> /> <br/>
 
-		<p>电话号码 <input type="text" name="cellphone" value="<?php echo $cellphone ?>"/><br/>
-		<p>Email <input type="text" name="email" value="<?php echo $email ?>"/><br/>
-		<p>公司名称 <input type="text" name="company_name" value="<?php echo $company_name ?>"/> <br/>
-		<p>办公地址 <input type="text" name="company_address" value="<?php echo $company_address ?>"/> <br/>
-		<p>工作经历 <input type="text" name="experience" value="<?php echo $experience ?>"/> <br/>
-		<p>产品简介</p> <input type="text" name="product_info" value="<?php echo $product_info ?>"/> <br/>
-		<p>所缺资源说明</p> <input type="text" name="source_info" value="<?php echo $source_info ?>"/> <br/>
+		<p>电话号码 <input type="text" name="cellphone" value=<?php echo $cellphone ?> /><br/>
+		<p>Email <input type="text" name="email" value=<?php echo $email ?> /><br/>
+		<p>公司名称 <input type="text" name="company_name" value=<?php echo $company_name ?> /> <br/>
+		<p>办公地址 <input type="text" name="company_address" value=<?php echo $company_address ?> /> <br/>
+		<p>工作经历 <input type="text" name="experience" value=<?php echo $experience ?> /> <br/>
+		<p>产品简介</p> <input type="text" name="product_info" value=<?php echo $product_info ?> /> <br/>
+		<p>所缺资源说明</p> <input type="text" name="source_info" value=<?php echo $source_info ?> /> <br/>
 
-		<input type="submit" value="注册" />&nbsp;
+		<input type="submit" value="更新" />&nbsp;
 		<input type="reset" value="重置"/>
 	</form>
 <body>
