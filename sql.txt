@@ -1,0 +1,21 @@
+CREATE DATABASE  `zl` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+
+
+CREATE TABLE  `zl`.`user_info` (
+`wx_openid` VARCHAR( 128 ) NOT NULL ,
+`wx_nickname` VARCHAR( 128 ) NOT NULL ,
+`wx_headimgurl` VARCHAR( 512 ) NOT NULL ,
+`name` VARCHAR( 128 ) NOT NULL ,
+`sex` INT( 1 ) NOT NULL ,
+`birthday` VARCHAR( 32 ) NOT NULL ,
+`cellphone` VARCHAR( 32 ) NOT NULL ,
+`email` VARCHAR( 128 ) NOT NULL ,
+`company_name` VARCHAR( 256 ) NOT NULL ,
+`company_address` VARCHAR( 256 ) NOT NULL ,
+`experience` VARCHAR( 128 ) NOT NULL ,
+`product_info` TEXT NOT NULL ,
+`source_info` TEXT NOT NULL ,
+`register_time` DATE NOT NULL
+) ENGINE = INNODB;
+
