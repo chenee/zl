@@ -51,7 +51,7 @@ if ($result->fetch()){//if is enough
                     <div class="widget-content">
                         <div class="padd">
 
-                            <form action="user_register.php" method="POST" class="form-horizontal">
+                            <form action="do_register.php" method="POST" class="form-horizontal">
                                 <!-- Registration form starts -->
                                 <!-- Name -->
                                 <input type="hidden" name="wx_openid" value=<?php echo $wxinfo->openid ?> />
