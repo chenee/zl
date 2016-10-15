@@ -49,8 +49,7 @@
         </div>
         <ul class="">
             <li>
-                <a href="http://localhost:63342/src/tmp/wap_productDetails.html?goods_id=64156&amp;latitude=31.2647586&amp;longitude=120.72793"
-                   class="react">
+                <a href="http://www.baidu.com" class="react">
                     <div class="goods_img"> <img src="static/2.jpg"> </div>
                     <div class="goods-name">2016简约大方女神范</div>
                     <p><span class="store-name">小时代</span> <span class="distance">3.2km</span></p>
@@ -60,8 +59,7 @@
                     <p class="goods-info"><span class="goods-price"><strong>￥180</strong><i>门市价￥180</i></span> <span
                             class="num">已售1</span></p></a></li>
             <li>
-                <a href="http://localhost:63342/src/tmp/wap_productDetails.html?goods_id=64156&amp;latitude=31.2647586&amp;longitude=120.72793"
-                   class="react">
+                <a href="http://www.baidu.com" class="react">
                     <div class="goods_img"> <img src="static/2.jpg"> </div>
                     <div class="goods-name">2016简约大方女神范</div>
                     <p><span class="store-name">小时代</span> <span class="distance">3.2km</span></p>
@@ -71,8 +69,7 @@
                     <p class="goods-info"><span class="goods-price"><strong>￥180</strong><i>门市价￥180</i></span> <span
                             class="num">已售1</span></p></a></li>
             <li>
-                <a href="http://localhost:63342/src/tmp/wap_productDetails.html?goods_id=64156&amp;latitude=31.2647586&amp;longitude=120.72793"
-                   class="react">
+                <a href="http://www.baidu.com" class="react">
                     <div class="goods_img"> <img src="static/2.jpg"> </div>
                     <div class="goods-name">2016简约大方女神范</div>
                     <p><span class="store-name">小时代</span> <span class="distance">3.2km</span></p>
@@ -83,39 +80,31 @@
                             class="num">已售1</span></p></a></li>
         </ul>
     </div>
-    <script type="text/template" id="swiper-tmpl">
-        {{ for (var i=0;i
-        < it.length;i++) { }} <div class='swiper-slide'>
-            {{ if(it[i].target=="mall"){ }} {{ if(it[i].type == 'goods'){ }}
-            <a href="tmpl/productdetail.html?goods_id={{=it[i].data}}"><img src="{{=it[i].image}}"></a>
-            {{ }else if(it[i].type == 'store'){ }}
-            <a href="tmpl/shopDetail.html?store_id={{=it[i].data}}"><img src="{{=it[i].image}}"></a>
-            {{ }else if(it[i].type == 'activity_special' || it[i].type == 'special'){ }}
-            <a href="special_details.html?special_id={{=it[i].data}}&special_type=1&special_name={{=it[i].title}}"><img src="{{=it[i].image}}"></a>
-            {{ }else if(it[i].type == 'class_special' || it[i].type == 'good_class'){ }}
-            <a href="special_details.html?special_id={{=it[i].data}}&special_type=3&special_name={{=it[i].title}}"><img src="{{=it[i].image}}"></a>
-            {{ }else { }}
-            <a href="{{=it[i].data_url}}"><img src="{{=it[i].image}}"></a>
-            {{ } }} {{ }else{ }} {{ if(it[i].data!=""){ }}
-            <a href="{{=it[i].data}}">
-                <img src="{{=it[i].image}}" alt="{{=it[i].title}}" />
-            </a>
-            {{ }else{ }}
-            <img src="{{=it[i].image}}" alt="{{=it[i].title}}" /> {{ } }} {{ } }}
-        </div>
-        {{ } }}
-    </script>
 </div>
-<script>var
-        SiteUrl="http://shop.aigegou.com/agg/wap/release/150844b",
-        ApiUrl="http://shop.aigegou.com/agg/mobile",pagesize=10,version="release/150844b".replace("release/",""),
-        WapSiteUrl="http://shop.aigegou.com/agg/wap/release/150844b/",
-        AndroidSiteUrl="http://shop.aigegou.com/agg/AndroidMall339.apk";</script>
 <script type="text/javascript" src="static/zepto.fastclick.doT.layer.min.js"></script>
 <script type="text/javascript" src="static/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="static/swipe.js"></script>
 <script type="text/javascript" src="static/common.js"></script>
-<script type="text/javascript" src="static/wx-util.js"></script>
-<script type="text/javascript" src="static/index_o2o.js"></script>
+<script>
+    //swiper
+    document.removeEventListener("swipe", '#swiper-container', true);
+    $('.swiper-container').each(function () {
+        if ($(this).find('.swiper-slide').length < 2) {
+            return;
+        }
+        Swipe(this, {
+            startSlide: 2,
+            speed: 400,
+            auto: 3000,
+            continuous: true,
+            disableScroll: false,
+            stopPropagation: false,
+            callback: function (index, elem) {
+            },
+            transitionEnd: function (index, elem) {
+            }
+        });
+    });
+</script>
 </body>
 </html>
