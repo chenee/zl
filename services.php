@@ -8,13 +8,19 @@
   <!-- TemplateEndEditable -->
   <head></head>
   <body>
-    <a href="services.php">服务</a><p></p>
-    <a href="user_register.html">注册通道</a><p></p>
-    <a href="getwxinfo.php?next=register">wx-注册通道</a><p></p>
-    <div>我的
-    <a href="orders.html">服务进度</a>
-    <a href="profile.php">修改资料</a>
-      <a href="getwxinfo.php?next=profile">wx-修改资料</a>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: chenyiyi
+ * Date: 16/10/15
+ * Time: 08:57
+ */
+?>
+    <div align="center" style="width: 300px;height: 200px;background-color: gray" >
+      <img src="img/1.jpg" alt="img/1.jpg" width="100%" height="100%"/>
     </div>
+  <div align="center" style="width: 80%; height: 200px; background-color: gray">
+
+  </div>
   </body>
 </html>

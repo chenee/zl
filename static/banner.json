@@ -1,0 +1,88 @@
+{
+  "code": 200,
+  "message": "OK",
+  "data": [
+    {
+      "adv_list": {
+        "item": [
+          {
+            "image": "http:\/\/img.aigegou.com\/mobile\/special\/s2\/s2_05229536260870862.jpg",
+            "type": "url",
+            "data": "http:\/\/ybk.guichangding.com\/",
+            "title": "",
+            "data_url": "http:\/\/ybk.guichangding.com\/",
+            "target": "o2o"
+          },
+          {
+            "image": "http:\/\/img.aigegou.com\/mobile\/special\/s2\/s2_05251828738020061.jpg",
+            "type": "",
+            "data": "",
+            "title": "\u62db\u5546\u4f1a\u5e7f\u544a\u56fe",
+            "data_url": "",
+            "target": ""
+          },
+          {
+            "image": "http:\/\/img.aigegou.com\/mobile\/special\/s2\/s2_05275310284521992.jpg",
+            "type": "activity_special",
+            "data": "44",
+            "title": "\u65b0\u7586\u53ed\u5482\u563f",
+            "data_url": "44",
+            "target": "mall"
+          },
+          {
+            "image": "http:\/\/img.aigegou.com\/shop\/adv\/05235390243502501.jpg",
+            "data": "http:\/\/wap.jxstcy.com\/index.php\/Wap\/Mall\/index\/ai\/1.html",
+            "type": "url",
+            "title": "",
+            "describe": "",
+            "data_url": "http:\/\/wap.jxstcy.com\/index.php\/Wap\/Mall\/index\/ai\/1.html",
+            "target": ""
+          }
+        ]
+      }
+    },
+    {
+      "home3": {
+        "title": "\u672c\u571f\u9996\u9875\u5546\u54c1\u5206\u7c7b",
+        "item": [
+          {
+            "image": "http:\/\/img.aigegou.com\/mobile\/special\/s2\/s2_05095353560956568.jpg",
+            "type": "good_class",
+            "data": "43",
+            "title": "\u5973\u4eba\u798f\u5229",
+            "describe": "\u5929\u5929\u597d\u793c\u9001\u4e0d\u505c",
+            "data_url": "43",
+            "target": "o2o"
+          },
+          {
+            "image": "http:\/\/img.aigegou.com\/mobile\/special\/s2\/s2_05095353858535314.jpg",
+            "type": "good_class",
+            "data": "1",
+            "title": "\u7f8e\u98df\u72c2\u6b22",
+            "describe": "\u6311\u6218\u4f60\u7684\u5473\u857e",
+            "data_url": "1",
+            "target": "o2o"
+          },
+          {
+            "image": "http:\/\/img.aigegou.com\/mobile\/special\/s2\/s2_05095354168113659.jpg",
+            "type": "good_class",
+            "data": "17",
+            "title": "\u5168\u57ce\u70ed\u55e8",
+            "describe": "\u55e8\u5531\u65e0\u6781\u9650",
+            "data_url": "17",
+            "target": "o2o"
+          },
+          {
+            "image": "http:\/\/img.aigegou.com\/mobile\/special\/s2\/s2_05095354463480117.jpg",
+            "type": "good_class",
+            "data": "85",
+            "title": "\u5065\u8eab\u51cf\u80a5",
+            "describe": "\u5e26\u4f60\u66b4\u6c57\u5e26\u4f60\u98de",
+            "data_url": "85",
+            "target": "o2o"
+          }
+        ]
+      }
+    }
+  ]
+}
