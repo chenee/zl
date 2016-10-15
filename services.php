@@ -82,9 +82,7 @@
     </div>
 </div>
 <script type="text/javascript" src="static/zepto.fastclick.doT.layer.min.js"></script>
-<script type="text/javascript" src="static/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="static/swipe.js"></script>
-<script type="text/javascript" src="static/common.js"></script>
 <script>
     //swiper
     document.removeEventListener("swipe", '#swiper-container', true);
