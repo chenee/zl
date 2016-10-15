@@ -98,11 +98,15 @@ if ($result->fetch()){//if is enough
 
                                     <div class="col-lg-9">
                                         <select class="form-control" id="birthday" name="birthday">
-                                            <option>&nbsp;</option>
+                                            <option value="" >&nbsp;</option>
                                             <?php
                                             $years = range(2020, 1900);
                                             foreach ($years as $yr) {
-                                                echo '<option value='.$yr.'>'.$yr.'</option>';
+                                                if($birthday==$yr){
+                                                    echo '<option selected value='.$yr.'>'.$yr.'</option>';
+                                                } else{
+                                                    echo '<option value='.$yr.'>'.$yr.'</option>';
+                                                }
                                             }
 
                                             ?>
@@ -114,7 +118,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="cellphone">电话号码</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="cellphone" name="cellphone">
+                                        <input type="text" class="form-control" id="cellphone" name="cellphone" value=<?php echo $cellphone ?> >
                                     </div>
                                 </div>
                                 <!-- Email -->
@@ -122,7 +126,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="email">Email</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="email" name="email">
+                                        <input type="text" class="form-control" id="email" name="email" value=<?php echo $email ?> />
                                     </div>
                                 </div>
                                 <!-- CompanyName-->
@@ -130,7 +134,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="company_name">公司名称</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="company_name" name="company_name">
+                                        <input type="text" class="form-control" id="company_name" name="company_name" value=<?php echo $company_name ?> />
                                     </div>
                                 </div>
                                 <!-- CompanyAddress-->
@@ -138,7 +142,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="company_address">公司地址</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="company_address" name="company_address">
+                                        <input type="text" class="form-control" id="company_address" name="company_address" value=<?php echo $company_address ?> />
                                     </div>
                                 </div>
                                 <!-- Experience-->
@@ -146,7 +150,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="experience">工作经历</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="experience" name="experience">
+                                        <input type="text" class="form-control" id="experience" name="experience" value=<?php echo $experience ?> />
                                     </div>
                                 </div>
                                 <!-- ProductInfo-->
@@ -154,7 +158,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="product_info">产品简介</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="product_info" name="product_info">
+                                        <input type="text" class="form-control" id="product_info" name="product_info" value=<?php echo $product_info ?> />
                                     </div>
                                 </div>
                                 <!-- SourceInfo-->
@@ -162,7 +166,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="source_info">所缺资源说明</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="source_info" name="source_info">
+                                        <input type="text" class="form-control" id="source_info" name="source_info" value=<?php echo $source_info ?> >
                                     </div>
                                 </div>
 
@@ -198,28 +202,5 @@ if ($result->fetch()){//if is enough
 <script src="static_register/jquery.js"></script>
 <script src="static_register/bootstrap.js"></script>
 
-	<form action="do_update_profile.php" method="POST">
-        <input type="hidden" name="wx_openid" value=<?php echo $wx_openid ?> />
-        <input type="hidden" name="wx_nickname" value=<?php echo $wx_nickname ?> />
-        <input type="hidden" name="wx_headimgurl" value=<?php echo $wx_headimgurl ?> />
-        <img width="200" height="200" src="<?php echo $wxinfo->headimgurl ?>">
-
-		<p>姓名 <input type="text" name="name" value=<?php echo $name ?> /><br/>
-
-		<p>性别 <input type="text" name="sex" value=<?php echo $sex ?> /><br/>
-
-		<p>出生年月 <input type="text" name="birthday" value=<?php echo $birthday ?> /> <br/>
-
-		<p>电话号码 <input type="text" name="cellphone" value=<?php echo $cellphone ?> /><br/>
-		<p>Email <input type="text" name="email" value=<?php echo $email ?> /><br/>
-		<p>公司名称 <input type="text" name="company_name" value=<?php echo $company_name ?> /> <br/>
-		<p>办公地址 <input type="text" name="company_address" value=<?php echo $company_address ?> /> <br/>
-		<p>工作经历 <input type="text" name="experience" value=<?php echo $experience ?> /> <br/>
-		<p>产品简介</p> <input type="text" name="product_info" value=<?php echo $product_info ?> /> <br/>
-		<p>所缺资源说明</p> <input type="text" name="source_info" value=<?php echo $source_info ?> /> <br/>
-
-		<input type="submit" value="更新" />&nbsp;
-		<input type="reset" value="重置"/>
-	</form>
 </body>
 </html>
