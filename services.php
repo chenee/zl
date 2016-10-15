@@ -18,28 +18,48 @@
 <div class="banner">
     <div class="swiper-container loading" style="visibility: visible;">
         <div class="swiper-wrapper" style="width: 1500px;">
-            <div class="swiper-slide" data-index="0" style="width: 375px; left: 0px; transition-duration: 400ms; transform: translate(0px, 0px) translateZ(0px);">
-                <img src="static/banner1.jpg" alt=""></div>
+            <div class="swiper-slide" data-index="0"
+                 style="width: 375px; left: 0px; transition-duration: 400ms; transform: translate(0px, 0px) translateZ(0px);">
+                <a href="http://www.baidu.com"> <img src="static/banner1.jpg" alt=""> </a>
+            </div>
             <div class="swiper-slide" data-index="1"
                  style="width: 375px; left: -375px; transition-duration: 0ms; transform: translate(375px, 0px) translateZ(0px);">
-                <img src="static/banner2.jpg" alt="招商会广告图"></div>
+                <a href="http://www.baidu.com"> <img src="static/banner2.jpg" alt=""> </a>
+            </div>
             <div class="swiper-slide" data-index="2"
                  style="width: 375px; left: -750px; transition-duration: 400ms; transform: translate(-375px, 0px) translateZ(0px);">
-                <img src="static/banner3.jpg" alt="新疆叭咂嘿"></div>
+                <a href="http://www.baidu.com"> <img src="static/banner3.jpg" alt=""> </a>
+            </div>
         </div>
     </div>
 </div>
 <div class="content">
     <!--分类-->
     <ul class="type p_box">
-        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png"> <p>美食</p></a></li>
-        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png"> <p>美食</p></a></li>
-        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png"> <p>美食</p></a></li>
-        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png"> <p>美食</p></a></li>
-        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png"> <p>美食</p></a></li>
-        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png"> <p>美食</p></a></li>
-        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png"> <p>美食</p></a></li>
-        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png"> <p>美食</p></a></li>
+        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
+
+                <p>美食</p></a></li>
+        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
+
+                <p>美食</p></a></li>
+        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
+
+                <p>美食</p></a></li>
+        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
+
+                <p>美食</p></a></li>
+        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
+
+                <p>美食</p></a></li>
+        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
+
+                <p>美食</p></a></li>
+        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
+
+                <p>美食</p></a></li>
+        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
+
+                <p>美食</p></a></li>
     </ul>
     <!--猜你喜欢-->
     <div class="like p_box">
@@ -49,7 +69,7 @@
         <ul class="">
             <li>
                 <a href="http://www.baidu.com" class="react">
-                    <div class="goods_img"> <img src="static/2.jpg"> </div>
+                    <div class="goods_img"><img src="static/2.jpg"></div>
                     <div class="goods-name">2016简约大方女神范</div>
                     <p><span class="store-name">小时代</span> <span class="distance">3.2km</span></p>
 
@@ -59,7 +79,7 @@
                             class="num">已售1</span></p></a></li>
             <li>
                 <a href="http://www.baidu.com" class="react">
-                    <div class="goods_img"> <img src="static/2.jpg"> </div>
+                    <div class="goods_img"><img src="static/2.jpg"></div>
                     <div class="goods-name">2016简约大方女神范</div>
                     <p><span class="store-name">小时代</span> <span class="distance">3.2km</span></p>
 
@@ -69,7 +89,7 @@
                             class="num">已售1</span></p></a></li>
             <li>
                 <a href="http://www.baidu.com" class="react">
-                    <div class="goods_img"> <img src="static/2.jpg"> </div>
+                    <div class="goods_img"><img src="static/2.jpg"></div>
                     <div class="goods-name">2016简约大方女神范</div>
                     <p><span class="store-name">小时代</span> <span class="distance">3.2km</span></p>
 
