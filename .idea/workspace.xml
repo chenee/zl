@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4214b5bc-e5ab-4ec6-bfbc-41c47af7a914" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/user_register.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/br_files/back.png" afterPath="$PROJECT_DIR$/static_register/back.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/br_files/bootstrap-responsive.css" afterPath="$PROJECT_DIR$/static_register/bootstrap-responsive.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/br_files/bootstrap.css" afterPath="$PROJECT_DIR$/static_register/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/br_files/bootstrap.js" afterPath="$PROJECT_DIR$/static_register/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/br_files/cream.png" afterPath="$PROJECT_DIR$/static_register/cream.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/br_files/font-awesome.css" afterPath="$PROJECT_DIR$/static_register/font-awesome.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/br_files/jquery.js" afterPath="$PROJECT_DIR$/static_register/jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/br_files/style.css" afterPath="$PROJECT_DIR$/static_register/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/update_profile.php" afterPath="$PROJECT_DIR$/do_update_profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile.php" afterPath="$PROJECT_DIR$/profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wx_register.php" afterPath="$PROJECT_DIR$/wx_register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static_register/style.css" afterPath="$PROJECT_DIR$/static_register/style.css" />
     </list>
     <ignored path="src.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,15 +26,25 @@
     <splitter split-orientation="vertical" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/profile.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.92168677">
-                  <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+                <state vertical-scroll-proportion="-6.5384617">
+                  <caret line="163" column="36" selection-start-line="163" selection-start-column="36" selection-end-line="163" selection-end-column="36" />
                   <folding>
                     <marker date="1476526851000" expanded="true" signature="825:868" placeholder="select * FRO..user_info..." />
                     <marker date="1476526851000" expanded="true" signature="8724:8785" placeholder="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/static_register/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.5223464">
+                  <caret line="1277" column="2" selection-start-line="1277" selection-start-column="2" selection-end-line="1277" selection-end-column="2" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -109,6 +106,7 @@
         <option value="$PROJECT_DIR$/wx_register.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/profile.php" />
+        <option value="$PROJECT_DIR$/static_register/style.css" />
       </list>
     </option>
   </component>
@@ -178,6 +176,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static_register" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -406,22 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_register/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_register/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.046831954">
-          <caret line="215" column="0" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/do_register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9615384">
@@ -500,13 +496,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static_register/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_register/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_register/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.039039038">
-          <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="163" column="36" selection-start-line="163" selection-start-column="36" selection-end-line="163" selection-end-column="36" />
           <folding>
             <marker date="1476526851000" expanded="true" signature="825:868" placeholder="select * FRO..user_info..." />
+            <marker date="1476526851000" expanded="true" signature="8724:8785" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_register/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5223464">
+          <caret line="1277" column="2" selection-start-line="1277" selection-start-column="2" selection-end-line="1277" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
