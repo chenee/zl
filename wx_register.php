@@ -28,10 +28,10 @@ if ($result->fetch()){//if is enough
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
     <!-- Stylesheets -->
-    <link href="./br_files/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="./br_files/font-awesome.css">
-    <link href="./br_files/style.css" rel="stylesheet">
-    <link href="./br_files/bootstrap-responsive.css" rel="stylesheet">
+    <link href="static_register/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="static_register/font-awesome.css">
+    <link href="static_register/style.css" rel="stylesheet">
+    <link href="static_register/bootstrap-responsive.css" rel="stylesheet">
 
 
     <!-- Favicon -->
@@ -57,7 +57,7 @@ if ($result->fetch()){//if is enough
                                 <input type="hidden" name="wx_openid" value=<?php echo $wxinfo->openid ?> />
                                 <input type="hidden" name="wx_nickname" value=<?php echo $wxinfo->nickname ?> />
                                 <input type="hidden" name="wx_headimgurl" value=<?php echo $wxinfo->headimgurl ?> />
-                                <img width="200" height="200" src="<?php echo $wxinfo->headimgurl ?>">
+                                <img width="80" height="80" src="<?php echo $wxinfo->headimgurl ?>">
                                 <div class="form-group">
                                     <label class="control-label col-lg-3" for="name">姓名</label>
 
@@ -187,8 +187,8 @@ if ($result->fetch()){//if is enough
 
 
 <!-- JS -->
-<script src="./br_files/jquery.js"></script>
-<script src="./br_files/bootstrap.js"></script>
+<script src="static_register/jquery.js"></script>
+<script src="static_register/bootstrap.js"></script>
 
 </body>
 </html>
