@@ -1,6 +1,11 @@
 <?php
-require_once ("db.php");
 
+if(empty($_REQUEST["wx_openid"])){
+    echo "获取微信信息出错!";
+    exit;
+}
+
+require_once ("db.php");
 
 $insert_sql = "update user_info set name=?, sex=?, birthday=?, cellphone=?, email=?,
 company_name=?, company_address=?, experience=?, product_info=?,
