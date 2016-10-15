@@ -1147,7 +1147,7 @@ header.sch .head_bg {
 }
 
 .content {
-    padding-bottom: .96rem
+    #padding-bottom: .96rem
 }
 
 .p_box {
@@ -1365,8 +1365,8 @@ ul.type {
 .like li a {
     position: relative;
     display: block;
-    padding-left: 2.3rem;
-    height: 1.5rem
+    #padding-left: 2.3rem;
+    #height: 1.5rem
 }
 
 .like .goods_img {
@@ -1402,9 +1402,9 @@ ul.type {
 .like .goods-name {
     height: .3rem;
     padding: .04rem 0 .06rem;
-    font-size: .28rem;
-    line-height: .3rem;
-    color: #333
+    #font-size: .28rem;
+    #line-height: .3rem;
+    #color: #333
 }
 
 .like p {
@@ -1432,7 +1432,7 @@ ul.type {
 .like .goods-price, .like .store-name {
     float: left;
     text-align: left;
-    width: 70%
+    width: 100%
 }
 
 

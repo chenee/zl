@@ -11,6 +11,7 @@
     <meta content="telephone=no" name="format-detection">
     <title>E2P</title>
     <link rel="stylesheet" href="static/build_index_o2o.min.css">
+    <link href="static/wap-stylev2.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -35,70 +36,50 @@
 </div>
 <div class="content">
     <!--分类-->
+    <div class="nlt new" style="height: 20px"></div>
     <ul class="type p_box">
         <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
 
-                <p>美食</p></a></li>
+                <p>电子</p></a></li>
         <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
 
-                <p>美食</p></a></li>
+                <p>ID/MD</p></a></li>
         <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
 
-                <p>美食</p></a></li>
+                <p>模塑</p></a></li>
         <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
 
-                <p>美食</p></a></li>
+                <p>PCB/FP</p></a></li>
         <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
 
-                <p>美食</p></a></li>
+                <p>SMT</p></a></li>
         <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
 
-                <p>美食</p></a></li>
+                <p>包装</p></a></li>
         <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
 
-                <p>美食</p></a></li>
+                <p>EMS</p></a></li>
         <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
 
-                <p>美食</p></a></li>
+                <p>定制化服务</p></a></li>
     </ul>
-    <!--猜你喜欢-->
-    <div class="like p_box">
-        <div class="title">
-            <!--<a id="likeMore" class="more">换一批</a>-->猜你喜欢
-        </div>
-        <ul class="">
-            <li>
-                <a href="http://www.baidu.com" class="react">
-                    <div class="goods_img"><img src="static/2.jpg"></div>
-                    <div class="goods-name">2016简约大方女神范</div>
-                    <p><span class="store-name">小时代</span> <span class="distance">3.2km</span></p>
+</div>
+<div id="con" class="wide gt320 app">
+    <div class="nlt new"><h4>业界动态</h4>
+        <ul id="categorylist">
+            <li><a href="http://wap.ithome.com/html/211652.htm"> <span class="date">2016-3-15</span> <span class="title"> 阿里云推云翼计划：学生党9.9元/月，续费同价</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202795.htm"> <span class="date">2016-1-22</span> <span class="title"> 年底了替周鸿祎算算账 做机前吹过的牛b都兑现了吗？</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202794.htm"> <span class="date">2016-1-22</span> <span class="title"> 年底交答卷 周鸿祎去深圳做机一整年整出个啥</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202793.htm"> <span class="date">2016-1-22</span> <span class="title"> 五大平台红包一个都不落 360手机卫士抢红包专版正式上线</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202778.htm"> <span class="date">2016-1-22</span> <span class="title"> 在中国，为中国——戴尔商用渠道合作伙伴答谢晚宴在北京举行</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202777.htm"> <span class="date">2016-1-22</span> <span class="title"> 春节红包战况前瞻：360手机助手3.6亿现金红包上演诺曼底登陆</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202773.htm"> <span class="date">2016-1-22</span> <span class="title"> 第三方数据机构发布报告 今日头条个性化推荐方式成新闻APP发展趋势</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202772.htm"> <span class="date">2016-1-22</span> <span class="title"> 36氪2015年度最佳二次元社区产品评选，第一弹再次斩获高评价。</span> </a></li>
 
-                    <p><span class="eva-star"><i style="width: 0%"></i></span> <span class="eva-num">0评价</span></p>
-
-                    <p class="goods-info"><span class="goods-price"><strong>￥180</strong><i>门市价￥180</i></span> <span
-                            class="num">已售1</span></p></a></li>
-            <li>
-                <a href="http://www.baidu.com" class="react">
-                    <div class="goods_img"><img src="static/2.jpg"></div>
-                    <div class="goods-name">2016简约大方女神范</div>
-                    <p><span class="store-name">小时代</span> <span class="distance">3.2km</span></p>
-
-                    <p><span class="eva-star"><i style="width: 0%"></i></span> <span class="eva-num">0评价</span></p>
-
-                    <p class="goods-info"><span class="goods-price"><strong>￥180</strong><i>门市价￥180</i></span> <span
-                            class="num">已售1</span></p></a></li>
-            <li>
-                <a href="http://www.baidu.com" class="react">
-                    <div class="goods_img"><img src="static/2.jpg"></div>
-                    <div class="goods-name">2016简约大方女神范</div>
-                    <p><span class="store-name">小时代</span> <span class="distance">3.2km</span></p>
-
-                    <p><span class="eva-star"><i style="width: 0%"></i></span> <span class="eva-num">0评价</span></p>
-
-                    <p class="goods-info"><span class="goods-price"><strong>￥180</strong><i>门市价￥180</i></span> <span
-                            class="num">已售1</span></p></a></li>
         </ul>
     </div>
+
+
 </div>
 <script type="text/javascript" src="static/zepto.fastclick.doT.layer.min.js"></script>
 <script type="text/javascript" src="static/swipe.js"></script>
