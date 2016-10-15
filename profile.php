@@ -41,7 +41,7 @@ $result->bind_result(
 $result->execute();
 if ($result->fetch()){//if is enough
 }else{
-    echo "<br> 需要先注册 <a href='wx_register.php'> 注册通道</a> </br>";
+    echo "<br> 需要先注册 <a href='getwxinfo.php?next=wx_register'> 注册通道</a> </br>";
     exit;
 };
 ?>

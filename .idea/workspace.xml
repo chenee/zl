@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4214b5bc-e5ab-4ec6-bfbc-41c47af7a914" name="Default" comment="" />
+    <list default="true" id="4214b5bc-e5ab-4ec6-bfbc-41c47af7a914" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static_register/jquery.js" afterPath="$PROJECT_DIR$/static_register/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile.php" afterPath="$PROJECT_DIR$/profile.php" />
+    </list>
     <ignored path="src.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -27,12 +30,22 @@
           <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/profile.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.66566265">
-                  <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+                <state vertical-scroll-proportion="0.71686745">
+                  <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
                   <folding>
-                    <marker date="1476526851000" expanded="true" signature="825:868" placeholder="select * FRO..user_info..." />
-                    <marker date="1476526851000" expanded="true" signature="8724:8785" placeholder="..." />
+                    <marker date="1476527655000" expanded="true" signature="825:868" placeholder="select * FRO..user_info..." />
+                    <marker date="1476527655000" expanded="true" signature="8739:8800" placeholder="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-4.6153846">
+                  <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -47,7 +60,7 @@
                 <state vertical-scroll-proportion="0.039039038">
                   <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
                   <folding>
-                    <marker date="1476526851000" expanded="true" signature="825:868" placeholder="select * FRO..user_info..." />
+                    <marker date="1476527655000" expanded="true" signature="825:868" placeholder="select * FRO..user_info..." />
                   </folding>
                 </state>
               </provider>
@@ -93,8 +106,9 @@
         <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/wx_register.php" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/profile.php" />
         <option value="$PROJECT_DIR$/static_register/style.css" />
+        <option value="$PROJECT_DIR$/static_register/jquery.js" />
+        <option value="$PROJECT_DIR$/profile.php" />
       </list>
     </option>
   </component>
@@ -197,6 +211,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="awesome&#9;FILE&#9;file:///Users/chenyiyi/Dev/Php/proj.zhoulu/src/static_register/font-awesome.css&#10;cream.png&#9;FILE&#9;file:///Users/chenyiyi/Dev/Php/proj.zhoulu/src/static_register/cream.png" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -237,6 +252,9 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4214b5bc-e5ab-4ec6-bfbc-41c47af7a914" name="Default" comment="" />
@@ -458,14 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getwxinfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8461537">
@@ -474,14 +484,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_register/jquery.js">
+    <entry file="file://$PROJECT_DIR$/wx_register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.0271084">
+          <caret line="192" column="7" selection-start-line="192" selection-start-column="7" selection-end-line="192" selection-end-column="7" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1476525896000" expanded="true" signature="-1:-1" placeholder="select wx_op..user_info..." />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_register/cream.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static_register/bootstrap.css">
@@ -497,36 +512,52 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static_register/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5223464">
-          <caret line="1277" column="2" selection-start-line="1277" selection-start-column="2" selection-end-line="1277" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1555" column="4" selection-start-line="1555" selection-start-column="4" selection-end-line="1555" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wx_register.php">
+    <entry file="file://$PROJECT_DIR$/static_register/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0271084">
-          <caret line="192" column="7" selection-start-line="192" selection-start-column="7" selection-end-line="192" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="109" selection-start-line="0" selection-start-column="109" selection-end-line="0" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_register/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1476525896000" expanded="true" signature="-1:-1" placeholder="select wx_op..user_info..." />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6153846">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66566265">
-          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.71686745">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
-            <marker date="1476526851000" expanded="true" signature="825:868" placeholder="select * FRO..user_info..." />
-            <marker date="1476526851000" expanded="true" signature="8724:8785" placeholder="..." />
+            <marker date="1476527655000" expanded="true" signature="825:868" placeholder="select * FRO..user_info..." />
+            <marker date="1476527655000" expanded="true" signature="8739:8800" placeholder="..." />
           </folding>
         </state>
       </provider>
