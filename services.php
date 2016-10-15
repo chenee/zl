@@ -18,15 +18,14 @@
 <div class="banner">
     <div class="swiper-container loading" style="visibility: visible;">
         <div class="swiper-wrapper" style="width: 1500px;">
-            <div class="swiper-slide" data-index="0"
-                 style="width: 375px; left: 0px; transition-duration: 400ms; transform: translate(0px, 0px) translateZ(0px);">
-                <img src="static/s2_05229536260870862.jpg" alt=""></div>
+            <div class="swiper-slide" data-index="0" style="width: 375px; left: 0px; transition-duration: 400ms; transform: translate(0px, 0px) translateZ(0px);">
+                <img src="static/banner1.jpg" alt=""></div>
             <div class="swiper-slide" data-index="1"
                  style="width: 375px; left: -375px; transition-duration: 0ms; transform: translate(375px, 0px) translateZ(0px);">
-                <img src="static/s2_05251828738020061.jpg" alt="招商会广告图"></div>
+                <img src="static/banner2.jpg" alt="招商会广告图"></div>
             <div class="swiper-slide" data-index="2"
                  style="width: 375px; left: -750px; transition-duration: 400ms; transform: translate(-375px, 0px) translateZ(0px);">
-                <img src="static/s2_05275310284521992.jpg" alt="新疆叭咂嘿"></div>
+                <img src="static/banner3.jpg" alt="新疆叭咂嘿"></div>
         </div>
     </div>
 </div>
