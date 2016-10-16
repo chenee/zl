@@ -16,6 +16,10 @@
 
 <body>
 
+<?php
+    require_once("wx_info.php");
+?>
+
 <div class="banner">
     <div class="swiper-container loading" style="visibility: visible;">
         <div class="swiper-wrapper" style="width: 1500px;">
@@ -36,9 +40,10 @@
 </div>
 <div class="content">
     <!--分类-->
-    <div class="nlt new" style="height: 20px"></div>
+    <div class="nlt new" style="height: 20px">欢迎: <?php echo $wxinfo->nickname ?></div>
     <ul class="type p_box">
-        <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
+        <li><a href="services/srv_electronic.php?wx_openid=<?php echo $wxinfo->openid; ?>" class="react"> <img
+                    src="static/3.png">
 
                 <p>电子</p></a></li>
         <li><a href="http://www.baidu.com" class="react"> <img src="static/3.png">
@@ -67,14 +72,22 @@
 <div id="con" class="wide gt320 app">
     <div class="nlt new"><h4>业界动态</h4>
         <ul id="categorylist">
-            <li><a href="http://www.baidu.com"> <span class="date">2016-3-15</span> <span class="title"> 关于E2P服务的相关说明和协议</span> </a></li>
-            <li><a href="http://www.baidu.com"> <span class="date">2016-1-22</span> <span class="title"> 关于E2P深度合作服务的资费说明</span> </a></li>
-            <li><a href="http://wap.ithome.com/html/202794.htm"> <span class="date">2016-1-22</span> <span class="title"> 年底交答卷 周鸿祎去深圳做机一整年整出个啥</span> </a></li>
-            <li><a href="http://wap.ithome.com/html/202793.htm"> <span class="date">2016-1-22</span> <span class="title"> 五大平台红包一个都不落 360手机卫士抢红包专版正式上线</span> </a></li>
-            <li><a href="http://wap.ithome.com/html/202778.htm"> <span class="date">2016-1-22</span> <span class="title"> 在中国，为中国——戴尔商用渠道合作伙伴答谢晚宴在北京举行</span> </a></li>
-            <li><a href="http://wap.ithome.com/html/202777.htm"> <span class="date">2016-1-22</span> <span class="title"> 春节红包战况前瞻：360手机助手3.6亿现金红包上演诺曼底登陆</span> </a></li>
-            <li><a href="http://wap.ithome.com/html/202773.htm"> <span class="date">2016-1-22</span> <span class="title"> 第三方数据机构发布报告 今日头条个性化推荐方式成新闻APP发展趋势</span> </a></li>
-            <li><a href="http://wap.ithome.com/html/202772.htm"> <span class="date">2016-1-22</span> <span class="title"> 36氪2015年度最佳二次元社区产品评选，第一弹再次斩获高评价。</span> </a></li>
+            <li><a href="http://www.baidu.com"> <span class="date">2016-3-15</span> <span
+                        class="title"> 关于E2P服务的相关说明和协议</span> </a></li>
+            <li><a href="http://www.baidu.com"> <span class="date">2016-1-22</span> <span class="title"> 关于E2P深度合作服务的资费说明</span>
+                </a></li>
+            <li><a href="http://wap.ithome.com/html/202794.htm"> <span class="date">2016-1-22</span> <span
+                        class="title"> 年底交答卷 周鸿祎去深圳做机一整年整出个啥</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202793.htm"> <span class="date">2016-1-22</span> <span
+                        class="title"> 五大平台红包一个都不落 360手机卫士抢红包专版正式上线</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202778.htm"> <span class="date">2016-1-22</span> <span
+                        class="title"> 在中国，为中国——戴尔商用渠道合作伙伴答谢晚宴在北京举行</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202777.htm"> <span class="date">2016-1-22</span> <span
+                        class="title"> 春节红包战况前瞻：360手机助手3.6亿现金红包上演诺曼底登陆</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202773.htm"> <span class="date">2016-1-22</span> <span
+                        class="title"> 第三方数据机构发布报告 今日头条个性化推荐方式成新闻APP发展趋势</span> </a></li>
+            <li><a href="http://wap.ithome.com/html/202772.htm"> <span class="date">2016-1-22</span> <span
+                        class="title"> 36氪2015年度最佳二次元社区产品评选，第一弹再次斩获高评价。</span> </a></li>
 
         </ul>
     </div>

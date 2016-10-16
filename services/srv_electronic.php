@@ -6,7 +6,7 @@
 
 
     <!-- Title and other stuffs -->
-    <title>用户注册页面</title>
+    <title>电子类服务申请</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
     <!-- Stylesheets -->
@@ -17,36 +17,7 @@
 
     <!-- Favicon -->
 </head>
-
-<?php
-require_once ("db.php");
-require_once("wx_info.php");
-
-//judge whether already registered
-$select_sql = "select * FROM user_info where wx_openid = ?";
-$result = $db->prepare($select_sql);
-$result->bind_param("s",$wx_openid);
-//$wx_openid = "}}XyhKE{";
-//$wx_openid = generate_password(8);
-$wx_openid = $wxinfo->openid;
-
-$result->bind_result(
-	$wx_openid, $wx_nickname , $wx_headimgurl,
-	$name, $sex, $birthday,
-	$cellphone, $email, $company_name,
-	$company_address, $experience, $product_info,
-	$source_info, $register_time
-);
-
-$result->execute();
-if ($result->fetch()){//if is enough
-}else{
-    echo "<br> 需要先注册 <a href='getwxinfo.php?next=wx_register'> 注册通道</a> </br>";
-    exit;
-};
-?>
 <body>
-
 <div class="admin-form">
     <div class="container">
         <div class="row">
@@ -59,18 +30,15 @@ if ($result->fetch()){//if is enough
                     <div class="widget-content">
                         <div class="padd">
 
-                            <form action="do_update_profile.php" method="POST" class="form-horizontal">
+                            <form action="do_electronic.php" method="POST" class="form-horizontal">
                                 <!-- Registration form starts -->
-                                <input type="hidden" name="wx_openid" value=<?php echo $wxinfo->openid ?> />
-                                <input type="hidden" name="wx_nickname" value=<?php echo $wxinfo->nickname ?> />
-                                <input type="hidden" name="wx_headimgurl" value=<?php echo $wxinfo->headimgurl ?> />
-                                <img width="80" height="80" src="<?php echo $wxinfo->headimgurl ?>">
                                 <!-- Name -->
+                                <input type="hidden" name="wx_openid" value=<?php echo $_REQUEST["wx_openid"] ?> />
                                 <div class="form-group">
                                     <label class="control-label col-lg-3" for="name">姓名</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="name" name="name" value=<?php echo $name; ?> >
+                                        <input type="text" class="form-control" id="name" name="name">
                                     </div>
                                 </div>
                                 <!-- Sex-->
@@ -80,13 +48,13 @@ if ($result->fetch()){//if is enough
                                         <div class="col-md-4">
                                             <div class="col-lg-6">
                                                 <div class="radio">
-                                                    <label><input <?php if($sex==1)echo "checked"; ?> id="optionsRadios2" name="sex" type="radio" value=1>男</label>
+                                                    <label><input checked id="optionsRadios2" name="sex" type="radio" value=1>男</label>
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="radio">
-                                                    <label><input <?php if($sex==0)echo "checked";?> id="optionsRadios1" name="sex" type="radio" value=0>女</label>
+                                                    <label><input id="optionsRadios1" name="sex" type="radio" value=0>女</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -98,15 +66,11 @@ if ($result->fetch()){//if is enough
 
                                     <div class="col-lg-9">
                                         <select class="form-control" id="birthday" name="birthday">
-                                            <option value="" >&nbsp;</option>
+                                            <option>&nbsp;</option>
                                             <?php
                                             $years = range(2020, 1900);
                                             foreach ($years as $yr) {
-                                                if($birthday==$yr){
-                                                    echo '<option selected value='.$yr.'>'.$yr.'</option>';
-                                                } else{
-                                                    echo '<option value='.$yr.'>'.$yr.'</option>';
-                                                }
+                                                echo '<option value='.$yr.'>'.$yr.'</option>';
                                             }
 
                                             ?>
@@ -118,7 +82,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="cellphone">电话号码</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="cellphone" name="cellphone" value=<?php echo $cellphone ?> >
+                                        <input type="text" class="form-control" id="cellphone" name="cellphone">
                                     </div>
                                 </div>
                                 <!-- Email -->
@@ -126,7 +90,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="email">Email</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="email" name="email" value=<?php echo $email ?> />
+                                        <input type="text" class="form-control" id="email" name="email">
                                     </div>
                                 </div>
                                 <!-- CompanyName-->
@@ -134,7 +98,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="company_name">公司名称</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="company_name" name="company_name" value=<?php echo $company_name ?> />
+                                        <input type="text" class="form-control" id="company_name" name="company_name">
                                     </div>
                                 </div>
                                 <!-- CompanyAddress-->
@@ -142,7 +106,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="company_address">公司地址</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="company_address" name="company_address" value=<?php echo $company_address ?> />
+                                        <input type="text" class="form-control" id="company_address" name="company_address">
                                     </div>
                                 </div>
                                 <!-- Experience-->
@@ -150,7 +114,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="experience">工作经历</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="experience" name="experience" value=<?php echo $experience ?> />
+                                        <input type="text" class="form-control" id="experience" name="experience">
                                     </div>
                                 </div>
                                 <!-- ProductInfo-->
@@ -158,7 +122,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="product_info">产品简介</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="product_info" name="product_info" value=<?php echo $product_info ?> />
+                                        <input type="text" class="form-control" id="product_info" name="product_info">
                                     </div>
                                 </div>
                                 <!-- SourceInfo-->
@@ -166,7 +130,7 @@ if ($result->fetch()){//if is enough
                                     <label class="control-label col-lg-3" for="source_info">所缺资源说明</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="source_info" name="source_info" value=<?php echo $source_info ?> >
+                                        <input type="text" class="form-control" id="source_info" name="source_info">
                                     </div>
                                 </div>
 
@@ -187,9 +151,6 @@ if ($result->fetch()){//if is enough
                             </form>
 
                         </div>
-                    </div>
-                    <div class="widget-foot">
-                        Already Registred? <a href="http://www.js-css.cn/divcss/admin/mac/login.html">Login</a>
                     </div>
                 </div>
             </div>
