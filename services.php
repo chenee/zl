@@ -67,8 +67,8 @@
 <div id="con" class="wide gt320 app">
     <div class="nlt new"><h4>业界动态</h4>
         <ul id="categorylist">
-            <li><a href="http://wap.ithome.com/html/211652.htm"> <span class="date">2016-3-15</span> <span class="title"> 阿里云推云翼计划：学生党9.9元/月，续费同价</span> </a></li>
-            <li><a href="http://wap.ithome.com/html/202795.htm"> <span class="date">2016-1-22</span> <span class="title"> 年底了替周鸿祎算算账 做机前吹过的牛b都兑现了吗？</span> </a></li>
+            <li><a href="http://www.baidu.com"> <span class="date">2016-3-15</span> <span class="title"> 关于E2P服务的相关说明和协议</span> </a></li>
+            <li><a href="http://www.baidu.com"> <span class="date">2016-1-22</span> <span class="title"> 关于E2P深度合作服务的资费说明</span> </a></li>
             <li><a href="http://wap.ithome.com/html/202794.htm"> <span class="date">2016-1-22</span> <span class="title"> 年底交答卷 周鸿祎去深圳做机一整年整出个啥</span> </a></li>
             <li><a href="http://wap.ithome.com/html/202793.htm"> <span class="date">2016-1-22</span> <span class="title"> 五大平台红包一个都不落 360手机卫士抢红包专版正式上线</span> </a></li>
             <li><a href="http://wap.ithome.com/html/202778.htm"> <span class="date">2016-1-22</span> <span class="title"> 在中国，为中国——戴尔商用渠道合作伙伴答谢晚宴在北京举行</span> </a></li>
