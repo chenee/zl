@@ -65,7 +65,7 @@ $experience = getRequest($db,"experience");
 $product_info = getRequest($db,"product_info");
 
 $source_info = getRequest($db,"source_info");
-$register_time =  '"'. time() . '"';
+$register_time =  time();
 
 
 $result->execute();

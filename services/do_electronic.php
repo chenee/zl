@@ -37,7 +37,7 @@ $current = getRequest($db,"current");
 
 $nexttime = getRequest($db,"nexttime");
 $endtime = getRequest($db,"endtime");
-$ordertime =  '"'. time() . '"';
+$ordertime =  time();
 
 
 $result->execute();
