@@ -8,12 +8,14 @@ number, requiretime, current,
 nexttime, endtime, ordertime
  ) values (?,?,?, ?,?,?, ?,?,?)";
 
+echo $insert_sql;
+
 $result = $db->prepare($insert_sql);
 
 $result->bind_param("sssssssss",
-    wx_openid, project_name, requirement,
-    number, requiretime, current,
-    nexttime, endtime, ordertime
+    $wx_openid, $project_name, $requirement,
+    $number, $requiretime, $current,
+    $nexttime, $endtime, $ordertime
 );
 
 
