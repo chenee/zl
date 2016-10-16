@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4214b5bc-e5ab-4ec6-bfbc-41c47af7a914" name="Default" comment="tmp">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/do_electronic.php" afterPath="$PROJECT_DIR$/services/do_electronic.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order.php" afterPath="$PROJECT_DIR$/order.php" />
     </list>
     <ignored path="src.iws" />
@@ -60,12 +59,22 @@
       <file leaf-file-name="order.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6258597">
-              <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.60247594">
+              <caret line="46" column="84" selection-start-line="46" selection-start-column="84" selection-end-line="46" selection-end-column="84" />
               <folding>
-                <marker date="1476605513000" expanded="true" signature="833:898" placeholder="select * FRO..srv_electronic..." />
-                <marker date="1476605513000" expanded="true" signature="1651:1685" placeholder="..." />
+                <marker date="1476606050000" expanded="true" signature="833:898" placeholder="select * FRO..srv_electronic..." />
+                <marker date="1476606050000" expanded="true" signature="1613:1647" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.9615384">
+              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -586,13 +595,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6258597">
-          <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.60247594">
+          <caret line="46" column="84" selection-start-line="46" selection-start-column="84" selection-end-line="46" selection-end-column="84" />
           <folding>
-            <marker date="1476605513000" expanded="true" signature="833:898" placeholder="select * FRO..srv_electronic..." />
-            <marker date="1476605513000" expanded="true" signature="1651:1685" placeholder="..." />
+            <marker date="1476606050000" expanded="true" signature="833:898" placeholder="select * FRO..srv_electronic..." />
+            <marker date="1476606050000" expanded="true" signature="1613:1647" placeholder="..." />
           </folding>
         </state>
       </provider>
