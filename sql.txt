@@ -33,7 +33,6 @@ CREATE TABLE  `zl`.`srv_electronic` (
 `nexttime` VARCHAR( 128 ) NOT NULL COMMENT  '下一阶段时间',
 `endtime` VARCHAR( 128 ) NOT NULL COMMENT  '上市时间',
 `ordertime` VARCHAR( 32 ) NOT NULL COMMENT  '下单时间',
-PRIMARY KEY (  `wx_openid` ) ,
 INDEX (  `id` )
 ) ENGINE = INNODB;
 
