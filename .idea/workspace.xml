@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4214b5bc-e5ab-4ec6-bfbc-41c47af7a914" name="Default" comment="tmp" />
+    <list default="true" id="4214b5bc-e5ab-4ec6-bfbc-41c47af7a914" name="Default" comment="tmp">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order.php" afterPath="$PROJECT_DIR$/order.php" />
+    </list>
     <ignored path="src.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -54,23 +56,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="order.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.846153">
-              <caret line="46" column="84" selection-start-line="46" selection-start-column="84" selection-end-line="46" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.5089409">
+              <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
               <folding>
-                <marker date="1476606050000" expanded="true" signature="833:898" placeholder="select * FRO..srv_electronic..." />
-                <marker date="1476606050000" expanded="true" signature="1613:1647" placeholder="..." />
+                <marker date="1476606273000" expanded="true" signature="833:898" placeholder="select * FRO..srv_electronic..." />
+                <marker date="1476606273000" expanded="true" signature="1625:1659" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11691885">
+            <state vertical-scroll-proportion="-3.2692308">
               <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
@@ -121,8 +123,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/sql.txt" />
         <option value="$PROJECT_DIR$/services/do_electronic.php" />
-        <option value="$PROJECT_DIR$/order.php" />
         <option value="$PROJECT_DIR$/1.php" />
+        <option value="$PROJECT_DIR$/order.php" />
       </list>
     </option>
   </component>
@@ -594,22 +596,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/order.php">
+    <entry file="file://$PROJECT_DIR$/1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.846153">
-          <caret line="46" column="84" selection-start-line="46" selection-start-column="84" selection-end-line="46" selection-end-column="84" />
-          <folding>
-            <marker date="1476606050000" expanded="true" signature="833:898" placeholder="select * FRO..srv_electronic..." />
-            <marker date="1476606050000" expanded="true" signature="1613:1647" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.php">
+    <entry file="file://$PROJECT_DIR$/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11691885">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
+        <state vertical-scroll-proportion="0.5089409">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+          <folding>
+            <marker date="1476606273000" expanded="true" signature="833:898" placeholder="select * FRO..srv_electronic..." />
+            <marker date="1476606273000" expanded="true" signature="1625:1659" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
