@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4214b5bc-e5ab-4ec6-bfbc-41c47af7a914" name="Default" comment="tmp">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql.txt" afterPath="$PROJECT_DIR$/sql.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/srv_electronic.php" afterPath="$PROJECT_DIR$/services/srv_electronic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile.php" afterPath="$PROJECT_DIR$/profile.php" />
     </list>
     <ignored path="src.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,14 +24,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="srv_electronic.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="srv_electronic.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/srv_electronic.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14030261">
+            <state vertical-scroll-proportion="-3.9230769">
               <caret line="45" column="96" selection-start-line="45" selection-start-column="96" selection-end-line="45" selection-end-column="96" />
               <folding>
                 <marker date="1476598712000" expanded="true" signature="877:889" placeholder="..." />
                 <marker date="1476598712000" expanded="true" signature="5472:5533" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/profile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.14030261">
+              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+              <folding>
+                <marker date="1476600239000" expanded="true" signature="825:868" placeholder="select * FRO..user_info..." />
               </folding>
             </state>
           </provider>
@@ -104,7 +115,6 @@
         <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/static_register/style.css" />
         <option value="$PROJECT_DIR$/static_register/jquery.js" />
-        <option value="$PROJECT_DIR$/profile.php" />
         <option value="$PROJECT_DIR$/wxid.php" />
         <option value="$PROJECT_DIR$/getwxinfo.php" />
         <option value="$PROJECT_DIR$/wx_register.php" />
@@ -114,6 +124,7 @@
         <option value="$PROJECT_DIR$/services.php" />
         <option value="$PROJECT_DIR$/services/srv_electronic.php" />
         <option value="$PROJECT_DIR$/sql.txt" />
+        <option value="$PROJECT_DIR$/profile.php" />
       </list>
     </option>
   </component>
@@ -529,16 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.615385">
-          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
-          <folding>
-            <marker date="1476528416000" expanded="true" signature="-1:-1" placeholder="select * FRO..user_info..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.076923">
@@ -579,11 +580,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/services/srv_electronic.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14030261">
+        <state vertical-scroll-proportion="-3.9230769">
           <caret line="45" column="96" selection-start-line="45" selection-start-column="96" selection-end-line="45" selection-end-column="96" />
           <folding>
             <marker date="1476598712000" expanded="true" signature="877:889" placeholder="..." />
             <marker date="1476598712000" expanded="true" signature="5472:5533" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14030261">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding>
+            <marker date="1476600239000" expanded="true" signature="825:868" placeholder="select * FRO..user_info..." />
           </folding>
         </state>
       </provider>

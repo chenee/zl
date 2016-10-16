@@ -31,6 +31,7 @@ $result->bind_param("s",$wx_openid);
 $wx_openid = $wxinfo->openid;
 
 $result->bind_result(
+    $id,
 	$wx_openid, $wx_nickname , $wx_headimgurl,
 	$name, $sex, $birthday,
 	$cellphone, $email, $company_name,
