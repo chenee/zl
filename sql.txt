@@ -3,6 +3,7 @@ CREATE DATABASE  `zl` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 
 CREATE TABLE  `zl`.`user_info` (
+`id` INT( 16 ) NOT NULL AUTO_INCREMENT ,
 `wx_openid` VARCHAR( 128 ) NOT NULL ,
 `wx_nickname` VARCHAR( 128 ) NOT NULL ,
 `wx_headimgurl` VARCHAR( 512 ) NOT NULL ,
@@ -16,6 +17,25 @@ CREATE TABLE  `zl`.`user_info` (
 `experience` VARCHAR( 128 ) NOT NULL ,
 `product_info` TEXT NOT NULL ,
 `source_info` TEXT NOT NULL ,
-`register_time` DATE NOT NULL
+`register_time` DATE NOT NULL,
+PRIMARY KEY (  `wx_openid` ) ,
+INDEX (  `id` )
 ) ENGINE = INNODB;
+
+CREATE TABLE  `zl`.`srv_electronic` (
+`id` INT( 16 ) NOT NULL AUTO_INCREMENT ,
+`wx_openid` VARCHAR( 128 ) NOT NULL COMMENT  '微信id',
+`project_name` VARCHAR( 255 ) NOT NULL COMMENT  '项目名称',
+`requirement` VARCHAR( 255 ) NOT NULL COMMENT  '物流需求',
+`number` VARCHAR( 255 ) NOT NULL COMMENT  '需求数量',
+`requiretime` VARCHAR( 128 ) NOT NULL COMMENT  '求料时间',
+`current` VARCHAR( 128 ) NOT NULL COMMENT  '当前进度',
+`nexttime` VARCHAR( 128 ) NOT NULL COMMENT  '下一阶段时间',
+`endtime` VARCHAR( 128 ) NOT NULL COMMENT  '上市时间',
+`ordertime` VARCHAR( 32 ) NOT NULL COMMENT  '下单时间',
+PRIMARY KEY (  `wx_openid` ) ,
+INDEX (  `id` )
+) ENGINE = INNODB;
+
+
 

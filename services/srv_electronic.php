@@ -40,105 +40,66 @@ if(empty($_REQUEST["wx_openid"])){
 
                             <form action="do_electronic.php" method="POST" class="form-horizontal">
                                 <!-- Registration form starts -->
-                                <!-- Name -->
                                 <input type="hidden" name="wx_openid" value=<?php echo $_REQUEST["wx_openid"] ?> />
+                                <!-- Project Name-->
                                 <div class="form-group">
-                                    <label class="control-label col-lg-3" for="name">姓名</label>
+                                    <label class="control-label col-lg-3" for="project_name">项目名称</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="name" name="name">
+                                        <input type="text" class="form-control" id="product_name" name="project_name">
                                     </div>
                                 </div>
-                                <!-- Sex-->
+                                <!-- 物流需求-->
                                 <div class="form-group">
-                                    <label class="control-label col-lg-3" for="gender">性别</label>
-                                    <div class="rows" id="gender">
-                                        <div class="col-md-4">
-                                            <div class="col-lg-6">
-                                                <div class="radio">
-                                                    <label><input checked id="optionsRadios2" name="sex" type="radio" value=1>男</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="radio">
-                                                    <label><input id="optionsRadios1" name="sex" type="radio" value=0>女</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Birthday-->
-                                <div class="form-group">
-                                    <label class="control-label col-lg-3" for="birthday">出生年月</label>
+                                    <label class="control-label col-lg-3" for="requirement">物流需求</label>
 
                                     <div class="col-lg-9">
-                                        <select class="form-control" id="birthday" name="birthday">
-                                            <option>&nbsp;</option>
-                                            <?php
-                                            $years = range(2020, 1900);
-                                            foreach ($years as $yr) {
-                                                echo '<option value='.$yr.'>'.$yr.'</option>';
-                                            }
+                                        <input type="text" class="form-control" id="requirement" name="requirement">
+                                    </div>
+                                </div>
+                                <!-- 需求数量-->
+                                <div class="form-group">
+                                    <label class="control-label col-lg-3" for="number">需求数量</label>
 
-                                            ?>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="number" name="number">
+                                    </div>
+                                </div>
+                                <!-- 求料时间-->
+                                <div class="form-group">
+                                    <label class="control-label col-lg-3" for="requiretime">求料时间</label>
+
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="requirtime" name="requiretime">
+                                    </div>
+                                </div>
+                                <!-- 当前进度-->
+                                <div class="form-group">
+                                    <label class="control-label col-lg-3" for="current">当前进度</label>
+
+                                    <div class="col-lg-9">
+                                        <select class="form-control" id="current" name="current">
+                                            <option value=0>&nbsp;</option>
+                                            <option value="研发阶段">研发阶段</option>
+                                            <option value="样机阶段">样机阶段</option>
+                                            <option value="小批阶段">小批阶段</option>
                                         </select>
                                     </div>
                                 </div>
-                                <!-- CellPhone-->
+                                <!-- 下一阶段时间-->
                                 <div class="form-group">
-                                    <label class="control-label col-lg-3" for="cellphone">电话号码</label>
+                                    <label class="control-label col-lg-3" for="nexttime">下一阶段时间</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="cellphone" name="cellphone">
+                                        <input type="text" class="form-control" id="nexttime" name="nexttime">
                                     </div>
                                 </div>
-                                <!-- Email -->
+                                <!-- 上市时间-->
                                 <div class="form-group">
-                                    <label class="control-label col-lg-3" for="email">Email</label>
+                                    <label class="control-label col-lg-3" for="endtime">上市时间</label>
 
                                     <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="email" name="email">
-                                    </div>
-                                </div>
-                                <!-- CompanyName-->
-                                <div class="form-group">
-                                    <label class="control-label col-lg-3" for="company_name">公司名称</label>
-
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="company_name" name="company_name">
-                                    </div>
-                                </div>
-                                <!-- CompanyAddress-->
-                                <div class="form-group">
-                                    <label class="control-label col-lg-3" for="company_address">公司地址</label>
-
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="company_address" name="company_address">
-                                    </div>
-                                </div>
-                                <!-- Experience-->
-                                <div class="form-group">
-                                    <label class="control-label col-lg-3" for="experience">工作经历</label>
-
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="experience" name="experience">
-                                    </div>
-                                </div>
-                                <!-- ProductInfo-->
-                                <div class="form-group">
-                                    <label class="control-label col-lg-3" for="product_info">产品简介</label>
-
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="product_info" name="product_info">
-                                    </div>
-                                </div>
-                                <!-- SourceInfo-->
-                                <div class="form-group">
-                                    <label class="control-label col-lg-3" for="source_info">所缺资源说明</label>
-
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="source_info" name="source_info">
+                                        <input type="text" class="form-control" id="endtime" name="endtime">
                                     </div>
                                 </div>
 
