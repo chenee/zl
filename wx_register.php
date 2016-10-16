@@ -10,7 +10,7 @@ $wx_openid = $wxinfo->openid;
 
 $result->execute();
 if ($result->fetch()){//if is enough
-    echo "already registered!";
+    echo "<h1>already registered!</h1>";
     exit;
 }
 
@@ -175,9 +175,6 @@ if ($result->fetch()){//if is enough
                             </form>
 
                         </div>
-                    </div>
-                    <div class="widget-foot">
-                        Already Registred? <a href="http://www.js-css.cn/divcss/admin/mac/login.html">Login</a>
                     </div>
                 </div>
             </div>
