@@ -77,7 +77,7 @@ $register_time =  '"'. time() . '"';
 
 $result->execute();
 if ($result->affected_rows > 0){
-    echo "register ok!";
+    echo "<h1>register ok!</h1>";
 }
 
 $result->free_result();
