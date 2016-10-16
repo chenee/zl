@@ -41,10 +41,11 @@ $result->execute();
         <ul id="categorylist">
             <?php
             while ($result->fetch()) {
+                $datetime = date("Y-m-d",$ordertime);
                 ?>
                 <li>
                     <a href="order_detail.php?wx_openid=<?php echo $wx_openid; ?>&type=electronic&orderid=<?php echo $id; ?>">
-                        <span class="date"><?php echo $ordertime;?></span> <span
+                        <span class="date"><?php echo $datetime;?></span> <span
                             class="title"> <?php echo $project_name;?></span> </a></li>
                 <?php
             };

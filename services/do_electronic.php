@@ -14,8 +14,8 @@ number, requiretime, current,
 nexttime, endtime, ordertime
  ) values (?,?,?, ?,?,?, ?,?,?)";
 
-echo "<h4>" . $insert_sql . "</h4>";
-echo "<h4>" . $_REQUEST["wx_openid"] ."</h4>";
+//echo "<h4>" . $insert_sql . "</h4>";
+//echo "<h4>" . $_REQUEST["wx_openid"] ."</h4>";
 
 $result = $db->prepare($insert_sql);
 
@@ -42,7 +42,7 @@ $ordertime =  '"'. time() . '"';
 
 $result->execute();
 if ($result->affected_rows > 0){
-    echo "<h1>Apply OK! Go </h1> ";
+    echo "<h1>Apply OK! Go Back </h1> ";
 } else{
     echo $result->error;
 
