@@ -42,22 +42,15 @@ $source_info, $register_time
 );
 
 
-//we will use weixin value later
+//check wx info
 if (empty($_REQUEST["wx_openid"])){
-    $wx_openid = generate_password(8);
-}else{
-    $wx_openid = getRequest($db,"wx_openid");
+    echo "<h1> wx openid is null!</h1>";
+    exit;
 }
-if (empty($_REQUEST["wx_nickname"])){
-    $wx_nickname = generate_password(6);
-}else{
-    $wx_nickname = getRequest($db,"wx_nickname");
-}
-if (empty($_REQUEST["wx_headimgurl"])){
-    $wx_headimgurl = generate_password(12);
-}else{
-    $wx_headimgurl = getRequest($db,"wx_headimgurl");
-}
+
+$wx_openid = getRequest($db,"wx_openid");
+$wx_nickname = getRequest($db,"wx_nickname");
+$wx_headimgurl = getRequest($db,"wx_headimgurl");
 
 $name = getRequest($db,"name");
 $sex = getRequest($db,"sex");
