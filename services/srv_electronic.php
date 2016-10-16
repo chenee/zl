@@ -10,19 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
     <!-- Stylesheets -->
-    <link href="static_register/bootstrap.css" rel="stylesheet">
+    <link href="../static_register/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="static_register/font-awesome.css">
-    <link href="static_register/style.css" rel="stylesheet">
-    <link href="static_register/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../static_register/style.css" rel="stylesheet">
+    <link href="../static_register/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Favicon -->
 </head>
 <?php
 if(empty($_REQUEST["wx_openid"])){
-    echo "<h1> 未取得微信信息 </h1>";
-    exit;
+    echo "<h4> 未取得微信信息 </h4>";
+    //exit;
 } else{
-    echo "<h1>". $_REQUEST['wx_openid'] . " </h1>";
+    echo "<h4>". $_REQUEST['wx_openid'] . " </h4>";
 }
 ?>
 <body>
