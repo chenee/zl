@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4214b5bc-e5ab-4ec6-bfbc-41c47af7a914" name="Default" comment="tmp">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/do_electronic.php" afterPath="$PROJECT_DIR$/services/do_electronic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/srv_electronic.php" afterPath="$PROJECT_DIR$/services/srv_electronic.php" />
     </list>
     <ignored path="src.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,14 +25,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="do_electronic.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="do_electronic.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/do_electronic.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3741403">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <marker date="1476602011000" expanded="true" signature="87:244" placeholder="insert into ..." />
+                <marker date="1476602067000" expanded="true" signature="87:244" placeholder="insert into ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="srv_electronic.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/services/srv_electronic.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7716644">
+              <caret line="114" column="89" selection-start-line="114" selection-start-column="89" selection-end-line="114" selection-end-column="89" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,11 +111,11 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/wx_info.php" />
         <option value="$PROJECT_DIR$/services.php" />
-        <option value="$PROJECT_DIR$/services/srv_electronic.php" />
         <option value="$PROJECT_DIR$/sql.txt" />
         <option value="$PROJECT_DIR$/profile.php" />
         <option value="$PROJECT_DIR$/do_register.php" />
         <option value="$PROJECT_DIR$/services/do_electronic.php" />
+        <option value="$PROJECT_DIR$/services/srv_electronic.php" />
       </list>
     </option>
   </component>
@@ -532,17 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/srv_electronic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
-          <folding>
-            <marker date="1476598712000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1476598712000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql.txt">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -574,11 +574,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/services/do_electronic.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3741403">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <marker date="1476602011000" expanded="true" signature="87:244" placeholder="insert into ..." />
+            <marker date="1476602067000" expanded="true" signature="87:244" placeholder="insert into ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/srv_electronic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7716644">
+          <caret line="114" column="89" selection-start-line="114" selection-start-column="89" selection-end-line="114" selection-end-column="89" />
+          <folding />
         </state>
       </provider>
     </entry>

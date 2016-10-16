@@ -112,7 +112,7 @@ if(empty($_REQUEST["wx_openid"])){
                                             </label>
                                         </div>
                                         <br>
-                                        <button type="submit" class="btn btn-danger">Register</button>
+                                        <button type="submit" class="btn btn-danger">Apply</button>
                                         <button type="reset" class="btn btn-success">Reset</button>
                                     </div>
                                 </div>

@@ -8,7 +8,6 @@ number, requiretime, current,
 nexttime, endtime, ordertime
  ) values (?,?,?, ?,?,?, ?,?,?)";
 
-echo $insert_sql;
 
 $result = $db->prepare($insert_sql);
 
