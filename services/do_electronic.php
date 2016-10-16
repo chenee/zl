@@ -1,4 +1,10 @@
 <?php
+//check wx info
+if (empty($_REQUEST["wx_openid"])){
+    echo "<h1> wx openid is null!</h1>";
+    exit;
+}
+
 require_once ("../db.php");
 
 //********** session ,cookie need!!!
@@ -21,12 +27,6 @@ $result->bind_param("sssssssss",
 );
 
 
-//check wx info
-if (empty($_REQUEST["wx_openid"])){
-    echo "<h1> wx openid is null!</h1>";
-    exit;
-}
-
 $wx_openid = getRequest($db,"wx_openid");
 $project_name = getRequest($db,"project_name");
 $requirement = getRequest($db,"requirement");
@@ -43,6 +43,9 @@ $ordertime =  '"'. time() . '"';
 $result->execute();
 if ($result->affected_rows > 0){
     echo "<h1>Apply OK! Go </h1> ";
+} else{
+    echo $result->error;
+
 }
 
 $result->free_result();
