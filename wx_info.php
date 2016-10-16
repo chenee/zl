@@ -48,5 +48,5 @@ if ($access_token) {
 
 }
 else{
-   echo "<h1>access_token is null!!</h1>" ;
+   echo "<h1>access_token is null!!</h1>" ;//debug
 }

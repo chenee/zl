@@ -40,7 +40,7 @@
 </div>
 <div class="content">
     <!--分类-->
-    <div class="nlt new" style="height: 20px">欢迎: <?php echo $wxinfo->nickname ?></div>
+    <div class="nlt new" style="height: 4px"><h4></h4></div>
     <ul class="type p_box">
         <li><a href="services/srv_electronic.php?wx_openid=<?php echo $wxinfo->openid; ?>" class="react"> <img
                     src="static/3.png">

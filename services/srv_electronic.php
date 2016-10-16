@@ -17,6 +17,14 @@
 
     <!-- Favicon -->
 </head>
+<?php
+if(empty($_REQUEST["wx_openid"])){
+    echo "<h1> 未取得微信信息 </h1>";
+    exit;
+} else{
+    echo "<h1>". $_REQUEST['wx_openid'] . " </h1>";
+}
+?>
 <body>
 <div class="admin-form">
     <div class="container">
