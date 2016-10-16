@@ -23,13 +23,13 @@ $openId = $tools->GetOpenid();
 
 //②、统一下单
 $input = new WxPayUnifiedOrder();
-$input->SetBody("test");
-$input->SetAttach("test");
+$input->SetBody("E2P服务");
+$input->SetAttach("E2P服务");
 $input->SetOut_trade_no(WxPayConfig::MCHID.date("YmdHis"));
 $input->SetTotal_fee("1");
 $input->SetTime_start(date("YmdHis"));
 $input->SetTime_expire(date("YmdHis", time() + 600));
-$input->SetGoods_tag("test");
+$input->SetGoods_tag("E2P服务");
 //$input->SetNotify_url("http://paysdk.weixin.qq.com/example/notify.php");
 //$input->SetNotify_url(dirname('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']).'/notify.php');
 $input->SetNotify_url("http://zl.chenee.cn/zl/wxpayapi/example/notify.php");
