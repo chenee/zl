@@ -36,8 +36,6 @@ $result->bind_result(
 $result->execute();
 ?>
 
-?>
-
 <div id="con" class="wide gt320 app">
     <div class="nlt new"><h4>我的服务订单</h4>
         <ul id="categorylist">

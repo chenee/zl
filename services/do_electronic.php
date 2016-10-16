@@ -8,8 +8,11 @@ number, requiretime, current,
 nexttime, endtime, ordertime
  ) values (?,?,?, ?,?,?, ?,?,?)";
 
+echo "<h4>" . $insert_sql . "</h4>";
+echo "<h4>" . $_REQUEST["wx_openid"] ."</h4>";
 
 $result = $db->prepare($insert_sql);
+
 
 $result->bind_param("sssssssss",
     $wx_openid, $project_name, $requirement,
