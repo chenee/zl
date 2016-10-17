@@ -38,7 +38,7 @@ if(empty($_REQUEST["wx_openid"])){
                     <div class="widget-content">
                         <div class="padd">
 
-                            <form action="do_electronic.php" method="POST" class="form-horizontal">
+                            <form action="wxpayapi/example/jsapi.php" method="POST" class="form-horizontal">
                                 <!-- Registration form starts -->
                                 <input type="hidden" name="wx_openid" value=<?php echo $_REQUEST["wx_openid"] ?> />
                                 <!-- Project Name-->
