@@ -1,5 +1,5 @@
 <?
-require_once("wxid.php");
+require_once(dirname(__FILE__)."wxid.php");
 
 $next=$_REQUEST["next"];
 

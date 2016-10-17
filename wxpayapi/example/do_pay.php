@@ -1,6 +1,7 @@
 <?php
 //get form info
 
+//order step 1
 
 //$requestdata=array(
 //    "wx_openid" => $_REQUEST["wx_openid"],
@@ -17,9 +18,9 @@
 
 ini_set('date.timezone','Asia/Shanghai');
 //error_reporting(E_ERROR);
-require_once "../lib/WxPay.Api.php";
-require_once "WxPay.JsApiPay.php";
-require_once 'log.php';
+require_once dirname(__FILE__)."../lib/WxPay.Api.php";
+require_once dirname(__FILE__)."WxPay.JsApiPay.php";
+require_once dirname(__FILE__).'log.php';
 
 //初始化日志
 $logHandler= new CLogFileHandler("../logs/".date('Y-m-d').'.log');
@@ -69,10 +70,8 @@ $jsApiParameters = $tools->GetJsApiParameters($order);
  * 2、jsapi支付时需要填入用户openid，WxPay.JsApiPay.php中有获取openid流程 （文档可以参考微信公众平台“网页授权接口”，
  * 参考http://mp.weixin.qq.com/wiki/17/c0f37d5704f0b64713d5d2c37b468d75.html）
  */
-echo "sssssssssssssssssssssss1";
 //order step 1
-require_once "../../services/do_electronic.php";
-echo "sssssssssssssssssssssss2";
+require_once dirname(__FILE__)."../../services/do_electronic.php";
 do_electronic_step1();
 ?>
 

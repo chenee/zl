@@ -20,7 +20,7 @@
     if(isset($_REQUEST["wx_openid"])){
          $wx_openid = $_REQUEST["wx_openid"];
     } else{
-        require_once("wx_info.php");
+        require_once(dirname(__FILE__)."wx_info.php");
         $wx_openid = $wxinfo->openid;
     }
 ?>

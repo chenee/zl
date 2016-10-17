@@ -20,11 +20,11 @@
 if(! isset($wx_openid)){
     $wxid = $wx_openid;
 }else{
-    require_once("wx_info.php");
+    require_once(dirname(__FILE__)."wx_info.php");
     $wxid = $wxinfo->openid;
 };
 
-require_once("db.php");
+require_once(dirname(__FILE__)."db.php");
 
 $db = dbinit();
 //judge whether already registered

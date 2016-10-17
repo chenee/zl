@@ -1,8 +1,7 @@
 <?php
 //TODO: session check !
-echo "ssssss33";
-require_once("../db.php");
-echo "ssssss334";
+require_once(dirname(__FILE__)."../db.php");
+
 //preset order ,state : notpayed;
 function do_electronic_step1()
 {
@@ -11,7 +10,6 @@ function do_electronic_step1()
         echo "<h1> wx openid is null!</h1>";
         exit;
     }
-    echo "sssssssssssssssssssssss3";
 
     $db = dbinit();
 
@@ -30,8 +28,6 @@ nexttime, endtime, ordertime
         $nexttime, $endtime, $ordertime,
         $fee,$state,$out_trade_no
     );
-
-    echo "sssssssssssssssssssssss4";
 
     $wx_openid = getRequest($db, "wx_openid");
     $project_name = getRequest($db, "project_name");
