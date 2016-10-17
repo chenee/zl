@@ -92,6 +92,7 @@ $jsApiParameters = $tools->GetJsApiParameters($order);
 						success: function(data, textStatus, jqXHR) {
 							//data - response from server
 							alert("data:"+data);
+							window.location.href="http://zl.chenee.cn/zl/order.php";
 						},
 						error: function (jqXHR, textStatus, errorThrown) {
 							alert("error:");
