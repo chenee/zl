@@ -114,7 +114,7 @@ $ret = do_electronic_step1();
 //					});
 
 				}else{
-					alert("pay failed!");
+					//alert("支付失败:".res.err_msg);
 				};
 			}
 		);
