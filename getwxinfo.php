@@ -1,6 +1,4 @@
 <?
-echo dirname(__FILE__)."wxid.php";
-exit;
 require_once(dirname(__FILE__)."/wxid.php");
 
 $next=$_REQUEST["next"];
