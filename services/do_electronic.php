@@ -73,3 +73,36 @@ fee,state,out_trade_no
 
     return json_encode($array);
 }
+
+function do_electronic_step2($out_trade_no,$fee,$state){
+
+    $db = dbinit();
+    $insert_sql = "update srv_electronic set state=? where out_trade_no=? and fee=?";
+
+    $result = $db->prepare($insert_sql);
+
+    $result->bind_param("sss", $state, $out_trade_no, $fee );
+
+    $result->execute();
+
+
+    $code = 200;
+    $msg = "update order state ok!";
+
+    if ($result->affected_rows > 0){
+    }else{
+        echo $result->error;
+        $code = 80003;
+        $msg = "Update failed!";
+    }
+
+    $result->free_result();
+
+    $db->close();
+
+    return json_encode(array(
+       'code' => $code,
+        'msg' => $msg
+    ));
+
+}

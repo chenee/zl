@@ -5,6 +5,7 @@ error_reporting(E_ERROR);
 require_once "../lib/WxPay.Api.php";
 require_once '../lib/WxPay.Notify.php';
 require_once 'log.php';
+require_once dirname(__FILE__)."/../../services/do_electronic.php";
 
 //初始化日志
 $logHandler= new CLogFileHandler("../logs/".date('Y-m-d').'.log');
@@ -44,6 +45,14 @@ class PayNotifyCallBack extends WxPayNotify
 			$msg = "订单查询失败";
 			return false;
 		}
+
+		//update order pay info
+		if($data["result_code"]=="SUCCESS"){
+			//update item which [out_trade_no && fee] equal
+			$ret = do_electronic_step2($data["result_code"],$data["fee"],"payed");
+			Log::DEBUG("update order:".$ret);
+		}
+
 		return true;
 	}
 }
