@@ -1,8 +1,6 @@
 <?php
 //get form info
 
-//order step 1
-
 //$requestdata=array(
 //    "wx_openid" => $_REQUEST["wx_openid"],
 //    "project_name" => $_REQUEST["project_name"],
