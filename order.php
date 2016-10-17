@@ -17,14 +17,20 @@
 <body>
 
 <?php
-require_once("wx_info.php");
+if(! isset($wx_openid)){
+    $wxid = $wx_openid;
+}else{
+    require_once("wx_info.php");
+    $wxid = $wxinfo->openid;
+};
+
 require_once("db.php");
 
 //judge whether already registered
 $select_sql = "select * FROM srv_electronic where wx_openid = ? ORDER BY id DESC";
 $result = $db->prepare($select_sql);
 $result->bind_param("s", $wx_openid);
-$wx_openid = $wxinfo->openid;
+$wx_openid = $wxid;
 
 $result->bind_result(
     $id,
