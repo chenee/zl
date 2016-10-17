@@ -96,7 +96,7 @@ function do_electronic_step2($out_trade_no,$fee,$state){
     if ($result->affected_rows > 0){
     }else{
         $code = $result->errno;
-        $msg = "ERR: ".$out_trade_no ." | ".$fee." |".$result->error;
+        $msg = "ERR: ".$out_trade_no ." | ".$fee." | ".$state." | ".$result->error;
     }
 
     $result->free_result();

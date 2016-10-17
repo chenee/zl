@@ -49,7 +49,7 @@ class PayNotifyCallBack extends WxPayNotify
 		//update order pay info
 		if($data["result_code"]=="SUCCESS"){
 			//update item which [out_trade_no && fee] equal
-			$ret = do_electronic_step2($data["result_code"],$data["fee"],"payed");
+			$ret = do_electronic_step2($data["out_trade_no"],$data["cash_fee"],"payed");
 			Log::DEBUG("update order:".$ret);
 		}
 
