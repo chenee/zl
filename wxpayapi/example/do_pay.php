@@ -72,9 +72,8 @@ $jsApiParameters = $tools->GetJsApiParameters($order);
 echo "sssssssssssssssssssssss1";
 //order step 1
 require_once("../../services/do_electronic.php");
-echo "sssssssssssssssssssssss12";
-do_electronic_step1();
 echo "sssssssssssssssssssssss2";
+do_electronic_step1();
 ?>
 
 <html>

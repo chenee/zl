@@ -12,9 +12,8 @@ function do_electronic_step1()
     }
     echo "sssssssssssssssssssssss3";
 
-
-    echo "sssssssssssssssssssssss5";
-
+    $db = dbinit();
+    
     $insert_sql = "insert into srv_electronic (
 wx_openid, project_name, requirement,
 number, requiretime, current,
@@ -63,7 +62,6 @@ nexttime, endtime, ordertime
     $result->free_result();
     $db->close();
 
-    echo "sssssssssssssssssssssss5";
     $array = array(
         'code' => $code,
         'msg' => $msg,

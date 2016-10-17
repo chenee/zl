@@ -26,7 +26,7 @@ source_info', register_time ) values ('$wx_openid','$wx_nickname','$wx_headimgur
 '$experience','$product_info','$source_info','$register_time'
  )";
 */
-
+$db = dbinit();
 $insert_sql = "insert into user_info (wx_openid,wx_nickname,wx_headimgurl,name, sex, birthday, cellphone, email,
 company_name, company_address, experience, product_info,
 source_info, register_time ) values (?,?,?, ?,?,?,?,?,?,?, ?,?,?,?)";

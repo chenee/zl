@@ -26,6 +26,7 @@ if(! isset($wx_openid)){
 
 require_once("db.php");
 
+$db = dbinit();
 //judge whether already registered
 $select_sql = "select * FROM srv_electronic where wx_openid = ? ORDER BY id DESC";
 $result = $db->prepare($select_sql);

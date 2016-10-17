@@ -23,6 +23,7 @@ require_once ("db.php");
 require_once("wx_info.php");
 
 //judge whether already registered
+$db = dbinit();
 $select_sql = "select * FROM user_info where wx_openid = ?";
 $result = $db->prepare($select_sql);
 $result->bind_param("s",$wx_openid);

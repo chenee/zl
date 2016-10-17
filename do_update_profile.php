@@ -7,6 +7,7 @@ if(empty($_REQUEST["wx_openid"])){
 
 require_once ("db.php");
 
+$db = dbinit();
 $insert_sql = "update user_info set name=?, sex=?, birthday=?, cellphone=?, email=?,
 company_name=?, company_address=?, experience=?, product_info=?,
 source_info=? where wx_openid=?";
