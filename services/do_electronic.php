@@ -22,8 +22,9 @@ function do_electronic_step1()
     $insert_sql = "insert into srv_electronic (
 wx_openid, project_name, requirement,
 number, requiretime, current,
-nexttime, endtime, ordertime
- ) values (?,?,?, ?,?,?, ?,?,?)";
+nexttime, endtime, ordertime,
+fee,state,out_trade_no
+ ) values (?,?,?, ?,?,?, ?,?,?, ?,?,?)";
 
     $result = $db->prepare($insert_sql);
 
@@ -50,24 +51,6 @@ nexttime, endtime, ordertime
         $nexttime, $endtime, $ordertime,
         $fee,$state,$out_trade_no
     );
-
-
-    $requestdata=array(
-        "wx_openid" => $_REQUEST["wx_openid"],
-        "project_name" => $_REQUEST["project_name"],
-        "requirement" => $_REQUEST["requirement"],
-        "number" => $_REQUEST["number"],
-        "requiretime" => $_REQUEST["requiretime"],
-        "current" => $_REQUEST["current"],
-        "nexttime" => $_REQUEST["nexttime"],
-        "endtime" => $_REQUEST["endtime"],
-    );
-    $formdata = json_encode($requestdata);
-    echo "====================";
-    echo $formdata;
-    echo "====================";
-
-    return $insert_sql;
 
     $result->execute();
 
