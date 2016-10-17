@@ -17,8 +17,8 @@
 <body>
 
 <?php
-if(! isset($wx_openid)){
-    $wxid = $wx_openid;
+if(isset($_REQUEST["wx_openid"])){
+    $wxid = $_REQUEST["wx_openid"];
 }else{
     require_once(dirname(__FILE__)."/wx_info.php");
     $wxid = $wxinfo->openid;
@@ -37,7 +37,8 @@ $result->bind_result(
     $id,
     $wx_openid, $project_name, $requirement,
     $number, $requiretime, $current,
-    $nexttime, $endtime, $ordertime
+    $nexttime, $endtime, $ordertime,
+    $fee,$state,$out_trade_no
 );
 
 $result->execute();
