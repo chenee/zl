@@ -1,79 +1,68 @@
 <?php
 //TODO: session check !
 
-$requestdata=array(
-    "wx_openid" => $_REQUEST["wx_openid"],
-    "project_name" => $_REQUEST["project_name"],
-    "requirement" => $_REQUEST["requirement"],
-    "number" => $_REQUEST["number"],
-    "requiretime" => $_REQUEST["requiretime"],
-    "current" => $_REQUEST["current"],
-    "nexttime" => $_REQUEST["nexttime"],
-    "endtime" => $_REQUEST["endtime"],
-);
-$formdata = json_encode($requestdata);
-//echo $formdata;
+//preset order ,state : notpayed;
+function do_electronic_step1()
+{
+//  check wx info
+    if (empty($_REQUEST["wx_openid"])) {
+        echo "<h1> wx openid is null!</h1>";
+        exit;
+    }
 
+    require_once("../db.php");
 
-//check wx info
-if (empty($_REQUEST["wx_openid"])){
-    echo "<h1> wx openid is null!</h1>";
-    exit;
-}
-
-require_once ("../db.php");
-
-//********** session ,cookie need!!!
-$insert_sql = "insert into srv_electronic (
+    $insert_sql = "insert into srv_electronic (
 wx_openid, project_name, requirement,
 number, requiretime, current,
 nexttime, endtime, ordertime
  ) values (?,?,?, ?,?,?, ?,?,?)";
 
-//echo "<h4>" . $insert_sql . "</h4>";
-//echo "<h4>" . $_REQUEST["wx_openid"] ."</h4>";
-
-$result = $db->prepare($insert_sql);
+    $result = $db->prepare($insert_sql);
 
 
-$result->bind_param("sssssssss",
-    $wx_openid, $project_name, $requirement,
-    $number, $requiretime, $current,
-    $nexttime, $endtime, $ordertime
-);
+    $result->bind_param("ssssssssssss",
+        $wx_openid, $project_name, $requirement,
+        $number, $requiretime, $current,
+        $nexttime, $endtime, $ordertime,
+        $fee,$state,$out_trade_no
+    );
 
 
-$wx_openid = getRequest($db,"wx_openid");
-$project_name = getRequest($db,"project_name");
-$requirement = getRequest($db,"requirement");
+    $wx_openid = getRequest($db, "wx_openid");
+    $project_name = getRequest($db, "project_name");
+    $requirement = getRequest($db, "requirement");
 
-$number = getRequest($db,"number");
-$requiretime = getRequest($db,"requiretime");
-$current = getRequest($db,"current");
+    $number = getRequest($db, "number");
+    $requiretime = getRequest($db, "requiretime");
+    $current = getRequest($db, "current");
 
-$nexttime = getRequest($db,"nexttime");
-$endtime = getRequest($db,"endtime");
-$ordertime =  time();
+    $nexttime = getRequest($db, "nexttime");
+    $endtime = getRequest($db, "endtime");
+    $ordertime = time();
+    $fee = getRequest($db, "fee");
+    $state = "notpayed";
+    $out_trade_no = getRequest($db, "out_trade_no");
 
 
-$result->execute();
+    $result->execute();
 
-$code=200;
-$msg = "Apply OK";
+    $code = 200;
+    $msg = "Apply OK";
 
-if ($result->affected_rows > 0){
-    //nothing;
-} else{
-    $code = $result->errno;
-    $msg = $result->error;
+    if ($result->affected_rows > 0) {
+        //nothing;
+    } else {
+        $code = $result->errno;
+        $msg = $result->error;
+    }
+    $result->free_result();
+    $db->close();
+
+    $array = array(
+        'code' => $code,
+        'msg' => $msg,
+    );
+    echo json_encode($array);
+
 }
-$result->free_result();
-$db->close();
-
-$array=array(
-    'code' =>$code,
-    'msg' => $msg,
-);
-echo json_encode($array);
-
-

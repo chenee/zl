@@ -2,18 +2,18 @@
 //get form info
 
 
-$requestdata=array(
-    "wx_openid" => $_REQUEST["wx_openid"],
-    "project_name" => $_REQUEST["project_name"],
-    "requirement" => $_REQUEST["requirement"],
-    "number" => $_REQUEST["number"],
-    "requiretime" => $_REQUEST["requiretime"],
-    "current" => $_REQUEST["current"],
-    "nexttime" => $_REQUEST["nexttime"],
-    "endtime" => $_REQUEST["endtime"],
-);
-$formdata = json_encode($requestdata);
-echo $formdata;
+//$requestdata=array(
+//    "wx_openid" => $_REQUEST["wx_openid"],
+//    "project_name" => $_REQUEST["project_name"],
+//    "requirement" => $_REQUEST["requirement"],
+//    "number" => $_REQUEST["number"],
+//    "requiretime" => $_REQUEST["requiretime"],
+//    "current" => $_REQUEST["current"],
+//    "nexttime" => $_REQUEST["nexttime"],
+//    "endtime" => $_REQUEST["endtime"],
+//);
+//$formdata = json_encode($requestdata);
+//echo $formdata;
 
 ini_set('date.timezone','Asia/Shanghai');
 //error_reporting(E_ERROR);
@@ -42,8 +42,13 @@ $openId = $_REQUEST["wx_openid"];
 $input = new WxPayUnifiedOrder();
 $input->SetBody("E2P服务");
 $input->SetAttach("E2P服务");
-$input->SetOut_trade_no(WxPayConfig::MCHID.date("YmdHis"));
-$input->SetTotal_fee("1");
+
+$_REQUEST["out_trade_no"] = WxPayConfig::MCHID.date("YmdHis");
+$input->SetOut_trade_no($_REQUEST["out_trade_no"]);
+
+$_REQUEST["fee"] = "1";
+$input->SetTotal_fee($_REQUEST["fee"]);
+
 $input->SetTime_start(date("YmdHis"));
 $input->SetTime_expire(date("YmdHis", time() + 600));
 $input->SetGoods_tag("E2P服务");
@@ -64,6 +69,10 @@ $jsApiParameters = $tools->GetJsApiParameters($order);
  * 2、jsapi支付时需要填入用户openid，WxPay.JsApiPay.php中有获取openid流程 （文档可以参考微信公众平台“网页授权接口”，
  * 参考http://mp.weixin.qq.com/wiki/17/c0f37d5704f0b64713d5d2c37b468d75.html）
  */
+
+//order step 1
+include_once("../../services/do_electronic.php");
+do_electronic_step1();
 ?>
 
 <html>
