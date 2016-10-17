@@ -7,8 +7,14 @@ function do_electronic_step1()
 {
 //  check wx info
     if (empty($_REQUEST["wx_openid"])) {
-        echo "<h1> wx openid is null!</h1>";
-        exit;
+//        echo "<h1> wx openid is null!</h1>";
+
+        $array = array(
+            'code' => 8001,
+            'msg' => "wx_openid is null;at db_electronic_step1",
+        );
+
+        return json_encode($array);
     }
 
     $db = dbinit();
@@ -63,7 +69,6 @@ nexttime, endtime, ordertime
         'code' => $code,
         'msg' => $msg,
     );
-    echo json_encode($array);
-    exit;
 
+    return json_encode($array);
 }

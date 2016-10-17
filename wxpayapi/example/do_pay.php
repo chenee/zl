@@ -70,7 +70,7 @@ $jsApiParameters = $tools->GetJsApiParameters($order);
  */
 //order step 1
 require_once dirname(__FILE__)."../../services/do_electronic.php";
-do_electronic_step1();
+$ret = do_electronic_step1();
 ?>
 
 <html>
@@ -151,6 +151,8 @@ do_electronic_step1();
 	</script>
 </head>
 <body>
+    <br/>
+    <h5><?php echo $ret;?></h5>
     <br/>
     <font color="#9ACD32"><b>该笔订单支付金额为<span style="color:#f00;font-size:50px">1分</span>钱</b></font><br/><br/>
 	<div align="center">
