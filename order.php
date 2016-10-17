@@ -28,7 +28,7 @@ require_once(dirname(__FILE__)."/db.php");
 
 $db = dbinit();
 //judge whether already registered
-$select_sql = "select * FROM srv_electronic where wx_openid = ? ORDER BY id DESC";
+$select_sql = "select * FROM srv_electronic where wx_openid = ? and state='payed' ORDER BY id DESC";
 $result = $db->prepare($select_sql);
 $result->bind_param("s", $wx_openid);
 $wx_openid = $wxid;
