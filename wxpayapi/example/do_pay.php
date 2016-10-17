@@ -1,4 +1,20 @@
 <?php
+//get form info
+
+
+$requestdata=array(
+    "wx_openid" => $_REQUEST["wx_openid"],
+    "project_name" => $_REQUEST["project_name"],
+    "requirement" => $_REQUEST["requirement"],
+    "number" => $_REQUEST["number"],
+    "requiretime" => $_REQUEST["requiretime"],
+    "current" => $_REQUEST["current"],
+    "nexttime" => $_REQUEST["nexttime"],
+    "endtime" => $_REQUEST["endtime"],
+);
+$formdata = json_encode($requestdata);
+echo $formdata;
+
 ini_set('date.timezone','Asia/Shanghai');
 //error_reporting(E_ERROR);
 require_once "../lib/WxPay.Api.php";
@@ -19,7 +35,8 @@ function printf_info($data)
 
 //①、获取用户openid
 $tools = new JsApiPay();
-$openId = $tools->GetOpenid();
+//$openId = $tools->GetOpenid();
+$openId = $_REQUEST["wx_openid"];
 
 //②、统一下单
 $input = new WxPayUnifiedOrder();
@@ -39,9 +56,6 @@ $order = WxPayApi::unifiedOrder($input);
 echo '<font color="#f00"><b>统一下单支付单信息</b></font><br/>';
 printf_info($order);
 $jsApiParameters = $tools->GetJsApiParameters($order);
-
-//获取共享收货地址js函数参数
-//$editAddress = $tools->GetEditAddressParameters();
 
 //③、在支持成功回调通知中处理成功之后的事宜，见 notify.php
 /**
@@ -66,7 +80,24 @@ $jsApiParameters = $tools->GetJsApiParameters($order);
 			<?php echo $jsApiParameters; ?>,
 			function(res){
 				WeixinJSBridge.log(res.err_msg);
-				alert("cheneeispig:"+res.err_code+res.err_desc+res.err_msg);
+
+				alert("post to php");
+				//ajax post
+				$.ajax({
+					url : "../../services/do_electronic.php",
+					type: "POST",
+					data : <?php echo $formdata;?>,
+					success: function(data, textStatus, jqXHR)
+					{
+						//data - response from server
+						alert("data:"+data);
+					},
+					error: function (jqXHR, textStatus, errorThrown)
+					{
+						alert("error:");
+
+					}
+				});
 			}
 		);
 	}
