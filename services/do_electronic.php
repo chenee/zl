@@ -64,5 +64,6 @@ nexttime, endtime, ordertime
         'msg' => $msg,
     );
     echo json_encode($array);
+    exit;
 
 }
