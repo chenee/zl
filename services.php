@@ -17,7 +17,12 @@
 <body>
 
 <?php
-    require_once("wx_info.php");
+    if(isset($_REQUEST["wx_openid"])){
+         $wx_openid = $_REQUEST["wx_openid"];
+    } else{
+        require_once("wx_info.php");
+        $wx_openid = $wxinfo->openid;
+    }
 ?>
 
 <div class="banner">
@@ -42,7 +47,7 @@
     <!--分类-->
     <div class="nlt new" style="height: 4px"><h4></h4></div>
     <ul class="type p_box">
-        <li><a href="services/srv_electronic.php?wx_openid=<?php echo $wxinfo->openid; ?>" class="react"> <img
+        <li><a href="services/srv_electronic.php?wx_openid=<?php echo $wx_openid; ?>" class="react"> <img
                     src="static/3.png">
 
                 <p>电子</p></a></li>

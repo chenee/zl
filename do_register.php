@@ -71,6 +71,8 @@ $register_time =  time();
 $result->execute();
 if ($result->affected_rows > 0){
     echo "<h1>register ok!</h1>";
+    $newURL = "services.php?wx_openid=$wx_openid";
+    header('Location: '.$newURL);
 }
 
 $result->free_result();
