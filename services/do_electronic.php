@@ -50,7 +50,7 @@ nexttime, endtime, ordertime
         $nexttime, $endtime, $ordertime,
         $fee,$state,$out_trade_no
     );
-    return $result;
+    return $insert_sql;
 
     $result->execute();
 
