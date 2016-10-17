@@ -1,4 +1,7 @@
 <?php
+//TODO: session check !
+
+
 //check wx info
 if (empty($_REQUEST["wx_openid"])){
     echo "<h1> wx openid is null!</h1>";
@@ -41,13 +44,23 @@ $ordertime =  time();
 
 
 $result->execute();
+
+$code=80001;
+$msg = "Apply OK";
+
 if ($result->affected_rows > 0){
-    echo "<h1>Apply OK! Go Back </h1> ";
+    //nothing;
 } else{
-    echo $result->error;
-
+    $code = $result->errno;
+    $msg = $result->error;
 }
-
 $result->free_result();
-
 $db->close();
+
+$array=array(
+    'code' =>$code,
+    'msg' => $msg,
+);
+echo json_encode($array);
+
+

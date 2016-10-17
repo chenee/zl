@@ -22,7 +22,7 @@ if(empty($_REQUEST["wx_openid"])){
     echo "<h4> 未取得微信信息 </h4>";
     //exit;
 } else{
-    echo "<h4>". $_REQUEST['wx_openid'] . " </h4>";
+//    echo "<h4>". $_REQUEST['wx_openid'] . " </h4>";
 }
 ?>
 <body>
