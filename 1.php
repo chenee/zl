@@ -49,4 +49,5 @@ function do_electronic_step2($out_trade_no,$fee,$state){
 }
 
 require_once "db.php";
-do_electronic_step2("134125330120161017165148","1","payed");
+$ret = do_electronic_step2("134125330120161017165148","1","payed");
+echo $ret;
