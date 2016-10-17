@@ -1,6 +1,19 @@
 <?php
 //TODO: session check !
 
+$requestdata=array(
+    "wx_openid" => $_REQUEST["wx_openid"],
+    "project_name" => $_REQUEST["project_name"],
+    "requirement" => $_REQUEST["requirement"],
+    "number" => $_REQUEST["number"],
+    "requiretime" => $_REQUEST["requiretime"],
+    "current" => $_REQUEST["current"],
+    "nexttime" => $_REQUEST["nexttime"],
+    "endtime" => $_REQUEST["endtime"],
+);
+$formdata = json_encode($requestdata);
+echo $formdata;
+
 
 //check wx info
 if (empty($_REQUEST["wx_openid"])){

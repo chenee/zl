@@ -1,4 +1,21 @@
-<?php 
+<?php
+//get form info
+
+
+$requestdata=array(
+    "wx_openid" => $_REQUEST["wx_openid"],
+    "project_name" => $_REQUEST["project_name"],
+    "requirement" => $_REQUEST["requirement"],
+    "number" => $_REQUEST["number"],
+    "requiretime" => $_REQUEST["requiretime"],
+    "current" => $_REQUEST["current"],
+    "nexttime" => $_REQUEST["nexttime"],
+    "endtime" => $_REQUEST["endtime"],
+);
+$formdata = json_encode($requestdata);
+echo $formdata;
+
+
 ini_set('date.timezone','Asia/Shanghai');
 //error_reporting(E_ERROR);
 require_once "../lib/WxPay.Api.php";
@@ -66,7 +83,25 @@ $jsApiParameters = $tools->GetJsApiParameters($order);
 			<?php echo $jsApiParameters; ?>,
 			function(res){
 				WeixinJSBridge.log(res.err_msg);
-				alert("cheneeispig:"+res.err_code+res.err_desc+res.err_msg);
+
+				//alert("cheneeispig:"+res.err_code+res.err_desc+res.err_msg);
+				alert("post to php");
+				//ajax post
+				$.ajax({
+					url : "../../services/do_electronic.php",
+					type: "POST",
+					data : <?php echo $formdata;?>,
+					success: function(data, textStatus, jqXHR)
+					{
+						//data - response from server
+						alert("data:"+data);
+					},
+					error: function (jqXHR, textStatus, errorThrown)
+					{
+						alert("error:");
+
+					}
+				});
 			}
 		);
 	}
