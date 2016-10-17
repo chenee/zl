@@ -28,13 +28,6 @@ nexttime, endtime, ordertime
     $result = $db->prepare($insert_sql);
 
 
-    $result->bind_param("ssssssssssss",
-        $wx_openid, $project_name, $requirement,
-        $number, $requiretime, $current,
-        $nexttime, $endtime, $ordertime,
-        $fee,$state,$out_trade_no
-    );
-
     $wx_openid = getRequest($db, "wx_openid");
     $project_name = getRequest($db, "project_name");
     $requirement = getRequest($db, "requirement");
@@ -50,6 +43,12 @@ nexttime, endtime, ordertime
     $state = "notpayed";
     $out_trade_no = getRequest($db, "out_trade_no");
 
+    $result->bind_param("ssssssssssss",
+        $wx_openid, $project_name, $requirement,
+        $number, $requiretime, $current,
+        $nexttime, $endtime, $ordertime,
+        $fee,$state,$out_trade_no
+    );
 
     $result->execute();
 
