@@ -9,6 +9,7 @@ function do_electronic_step1()
         echo "<h1> wx openid is null!</h1>";
         exit;
     }
+    echo "sssssssssssssssssssssss3";
 
     require_once("../db.php");
 
@@ -28,6 +29,7 @@ nexttime, endtime, ordertime
         $fee,$state,$out_trade_no
     );
 
+    echo "sssssssssssssssssssssss4";
 
     $wx_openid = getRequest($db, "wx_openid");
     $project_name = getRequest($db, "project_name");
@@ -59,6 +61,7 @@ nexttime, endtime, ordertime
     $result->free_result();
     $db->close();
 
+    echo "sssssssssssssssssssssss5";
     $array = array(
         'code' => $code,
         'msg' => $msg,
