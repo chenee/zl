@@ -13,6 +13,7 @@ $requestdata=array(
 );
 $formdata = json_encode($requestdata);
 echo $formdata;
+exit;
 
 
 //check wx info
