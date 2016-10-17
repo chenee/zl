@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__)."wxid.php");
+require_once(dirname(__FILE__)."/wxid.php");
 
 $code = $_REQUEST["code"];
 

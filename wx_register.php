@@ -1,6 +1,6 @@
 <?php
-require_once (dirname(__FILE__)."wx_info.php");
-require_once (dirname(__FILE__)."db.php");
+require_once (dirname(__FILE__)."/wx_info.php");
+require_once (dirname(__FILE__)."/db.php");
 
 //judge whether already registered
 $db = dbinit();

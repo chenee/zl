@@ -1,9 +1,9 @@
 <?php
 ini_set('date.timezone','Asia/Shanghai');
 //error_reporting(E_ERROR);
-require_once dirname(__FILE__)."../lib/WxPay.Api.php";
-require_once dirname(__FILE__)."WxPay.JsApiPay.php";
-require_once dirname(__FILE__).'log.php';
+require_once dirname(__FILE__)."/../lib/WxPay.Api.php";
+require_once dirname(__FILE__)."/WxPay.JsApiPay.php";
+require_once dirname(__FILE__).'/log.php';
 
 //初始化日志
 $logHandler= new CLogFileHandler("../logs/".date('Y-m-d').'.log');

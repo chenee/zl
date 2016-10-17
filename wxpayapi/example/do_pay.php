@@ -16,9 +16,9 @@
 
 ini_set('date.timezone','Asia/Shanghai');
 //error_reporting(E_ERROR);
-require_once dirname(__FILE__)."../lib/WxPay.Api.php";
-require_once dirname(__FILE__)."WxPay.JsApiPay.php";
-require_once dirname(__FILE__).'log.php';
+require_once dirname(__FILE__)."/../lib/WxPay.Api.php";
+require_once dirname(__FILE__)."/WxPay.JsApiPay.php";
+require_once dirname(__FILE__).'/log.php';
 
 //初始化日志
 $logHandler= new CLogFileHandler("../logs/".date('Y-m-d').'.log');
@@ -69,7 +69,7 @@ $jsApiParameters = $tools->GetJsApiParameters($order);
  * 参考http://mp.weixin.qq.com/wiki/17/c0f37d5704f0b64713d5d2c37b468d75.html）
  */
 //order step 1
-require_once dirname(__FILE__)."../../services/do_electronic.php";
+require_once dirname(__FILE__)."/../../services/do_electronic.php";
 $ret = do_electronic_step1();
 ?>
 

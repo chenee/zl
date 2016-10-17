@@ -5,7 +5,7 @@ if(empty($_REQUEST["wx_openid"])){
     exit;
 }
 
-require_once (dirname(__FILE__)."db.php");
+require_once (dirname(__FILE__)."/db.php");
 
 $db = dbinit();
 $insert_sql = "update user_info set name=?, sex=?, birthday=?, cellphone=?, email=?,

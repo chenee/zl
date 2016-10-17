@@ -1,6 +1,6 @@
 <?php
 //TODO: session check !
-require_once(dirname(__FILE__)."../db.php");
+require_once(dirname(__FILE__)."/../db.php");
 
 //preset order ,state : notpayed;
 function do_electronic_step1()
