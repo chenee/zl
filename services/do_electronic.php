@@ -12,7 +12,7 @@ $requestdata=array(
     "endtime" => $_REQUEST["endtime"],
 );
 $formdata = json_encode($requestdata);
-echo $formdata;
+//echo $formdata;
 
 
 //check wx info
@@ -58,7 +58,7 @@ $ordertime =  time();
 
 $result->execute();
 
-$code=80001;
+$code=200;
 $msg = "Apply OK";
 
 if ($result->affected_rows > 0){
