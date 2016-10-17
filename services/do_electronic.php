@@ -81,7 +81,11 @@ function do_electronic_step2($out_trade_no,$fee,$state){
 
     $result = $db->prepare($insert_sql);
 
-    $result->bind_param("sss", $state, $out_trade_no, $fee );
+    $s= getRequest($db,$state);
+    $o= getRequest($db,$out_trade_no);
+    $f= getRequest($db,$fee);
+    $result->bind_param("sss", $s, $o, $f);
+
 
     $result->execute();
 
@@ -92,8 +96,8 @@ function do_electronic_step2($out_trade_no,$fee,$state){
     if ($result->affected_rows > 0){
     }else{
         echo $result->error;
-        $code = 80003;
-        $msg = "Update failed!";
+        $code = $result->errno;
+        $msg = $result->error;
     }
 
     $result->free_result();
