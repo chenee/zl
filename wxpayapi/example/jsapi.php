@@ -14,7 +14,7 @@ $requestdata=array(
 );
 $formdata = json_encode($requestdata);
 echo $formdata;
-
+exit;
 
 ini_set('date.timezone','Asia/Shanghai');
 //error_reporting(E_ERROR);
