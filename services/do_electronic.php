@@ -1,7 +1,8 @@
 <?php
 //TODO: session check !
+echo "ssssss33";
 require_once("../db.php");
-
+echo "ssssss334";
 //preset order ,state : notpayed;
 function do_electronic_step1()
 {
@@ -13,7 +14,7 @@ function do_electronic_step1()
     echo "sssssssssssssssssssssss3";
 
     $db = dbinit();
-    
+
     $insert_sql = "insert into srv_electronic (
 wx_openid, project_name, requirement,
 number, requiretime, current,
