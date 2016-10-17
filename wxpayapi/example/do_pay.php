@@ -69,10 +69,11 @@ $jsApiParameters = $tools->GetJsApiParameters($order);
  * 2、jsapi支付时需要填入用户openid，WxPay.JsApiPay.php中有获取openid流程 （文档可以参考微信公众平台“网页授权接口”，
  * 参考http://mp.weixin.qq.com/wiki/17/c0f37d5704f0b64713d5d2c37b468d75.html）
  */
-
+echo "sssssssssssssssssssssss1";
 //order step 1
 include_once("../../services/do_electronic.php");
 do_electronic_step1();
+echo "sssssssssssssssssssssss2";
 ?>
 
 <html>
