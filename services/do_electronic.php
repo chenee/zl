@@ -39,6 +39,7 @@ nexttime, endtime, ordertime
     $nexttime = getRequest($db, "nexttime");
     $endtime = getRequest($db, "endtime");
     $ordertime = time();
+
     $fee = getRequest($db, "fee");
     $state = "notpayed";
     $out_trade_no = getRequest($db, "out_trade_no");
@@ -49,6 +50,7 @@ nexttime, endtime, ordertime
         $nexttime, $endtime, $ordertime,
         $fee,$state,$out_trade_no
     );
+    return $result;
 
     $result->execute();
 
