@@ -81,9 +81,9 @@ function do_electronic_step2($out_trade_no,$fee,$state){
 
     $result = $db->prepare($insert_sql);
 
-    $s= getRequest($db,$state);
-    $o= getRequest($db,$out_trade_no);
-    $f= getRequest($db,$fee);
+    $s = mysqli_real_escape_string($db,$state);
+    $o = mysqli_real_escape_string($db,$out_trade_no);
+    $f = mysqli_real_escape_string($db,$fee);
     $result->bind_param("sss", $s, $o, $f);
 
 
